@@ -14,7 +14,7 @@ import { data } from '../store/watches';
 function Collection() {
 
 
-    const [watchList, setWatchList] = useRecoilState(data);
+    const watchList = useRecoilState(data);
 
     const steelWatches = useMemo(() => {
         return watchList.filter((task) => task.material === 'steel');

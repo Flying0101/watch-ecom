@@ -22,7 +22,7 @@ import TAG from '../image2/tag-logo.png';
 
 function Display() {
 
-    const [watchList, setWatchList] = useRecoilState(data);
+    const watchList = useRecoilState(data);
 
 
 

@@ -69,7 +69,7 @@ function Checkout() {
 
                             <div className="selected-container">
                                 <div className="img-info-con">
-                                    <img src={watch.image} className="check-img" />
+                                    <img alt="watch displayed" src={watch.image} className="check-img" />
                                     <div>
                                         <p className="check-name">{watch.name}</p>
                                         <p className="check-inf">{watch.sort}</p>
