@@ -90,23 +90,23 @@ function Display() {
             <div className="w-brands">
                 <div className="brand-grid">
                     <div className="brands">
-                        <img src={AUD} className="brand-img" />
+                        <img alt="watch brand icon" src={AUD} className="brand-img" />
 
                     </div>
                     <div className="brands">
-                        <img src={OME} className="brand-img" />
+                        <img alt="watch brand icon" src={OME} className="brand-img" />
 
                     </div>
                     <div className="brands">
-                        <img src={PAT} className="brand-img" />
+                        <img alt="watch brand icon" src={PAT} className="brand-img" />
 
                     </div>
                     <div className="brands">
-                        <img src={ROL} className="brand-img" />
+                        <img alt="watch brand icon" src={ROL} className="brand-img" />
 
                     </div>
                     <div className="brands">
-                        <img src={TAG} className="brand-img" />
+                        <img alt="watch brand icon" src={TAG} className="brand-img" />
 
                     </div>
                 </div>

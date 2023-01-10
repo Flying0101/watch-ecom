@@ -76,7 +76,7 @@ function Nav() {
             <p className="burg-logo">T3</p>
 
             <div className="burg-nav-img">
-                <img src={SA} className="nav-img" />
+                <img alt="navigation bar icon" src={SA} className="nav-img" />
             </div>
 
             <div className="line-breaker">
@@ -90,7 +90,7 @@ function Nav() {
             </div>
 
             <p className="burg-nav-footer"> Sweden, Stockholm </p>
-            <img src={SE} className="se-flag" />
+            <img alt="navigation bar icon" src={SE} className="se-flag" />
 
         </div>
 

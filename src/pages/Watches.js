@@ -1,8 +1,7 @@
-import React from 'react';
 
 import Intro from '../components2/Intro';
 import Display from '../components2/Display';
-import Collection from '../components2/Collection'; 
+import Collection from '../components2/Collection';
 
 
 function Landing() {
@@ -10,10 +9,10 @@ function Landing() {
 
     return (
         <div className="Watch-page">
-            <Intro /> 
+            <Intro />
             <Display />
-            <Collection /> 
-           
+            <Collection />
+
 
         </div>
 

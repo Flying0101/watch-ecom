@@ -23,10 +23,10 @@ function Manufacture() {
             <div className="Manufacture-section">
                 <p className="manu-slogan">FROM PROTOTYPE TO FINISHED WATCHES</p>
                 <div className="manu-img-con">
-                    <img src={MFF} className="manu-img" />
+                    <img alt="watch part" src={MFF} className="manu-img" />
                 </div>
                 <div className="manu-img-con2">
-                    <img src={MFW} className="manu-img2" />
+                    <img alt="watch gold link" src={MFW} className="manu-img2" />
                 </div>
                 <div className="m-intro">
                     <div className="m-int-container">
@@ -37,14 +37,14 @@ function Manufacture() {
 
 
                 <div className="fac-img-container">
-                    <img src={MFK} className="fac-img1" />
+                    <img alt="watch dial" src={MFK} className="fac-img1" />
 
                 </div>
 
 
                 <div className="watch-fac-container">
                     <div className="fac-w-img">
-                        <img src={FAC} className="fac-w-img1" />
+                        <img alt="watch parts" src={FAC} className="fac-w-img1" />
 
                     </div>
                     <div className="fac-w-img">

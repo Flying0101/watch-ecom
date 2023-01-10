@@ -15,7 +15,7 @@ function About() {
             <div className="a-grid-container">
                 <div className="about-grid">
                     <div className="ag-div">
-                        <img src={ST} className="sthlm-pic" />
+                        <img alt="stockholm" src={ST} className="sthlm-pic" />
                     </div>
 
                     <div className="ag-div2">

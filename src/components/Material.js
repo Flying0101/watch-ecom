@@ -23,11 +23,11 @@ function Material() {
 
                     </div>
                     <div className="mg-div">
-                        <img src={GM} className="mg-img" />
+                        <img alt="gold and silver bars" src={GM} className="mg-img" />
 
                     </div>
                     <div className="mg-div">
-                        <img  src={GT} className="mg-img" />
+                        <img  alt="very small watch part" src={GT} className="mg-img" />
                     </div>
                 </div>
             </div>
