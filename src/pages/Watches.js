@@ -1,3 +1,4 @@
+import React from 'react';
 
 import Intro from '../components2/Intro';
 import Display from '../components2/Display';

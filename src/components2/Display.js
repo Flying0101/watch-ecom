@@ -68,7 +68,7 @@ function Display() {
                             {goldWatches.map((dat) => (
                                 <div className="pre-w-cont">
                                     <Link style={navStyle} to={`/preview/${dat.id}`}>
-                                        <img src={dat.image} className="pre-img" />
+                                        <img alt="gold watch" src={dat.image} className="pre-img" />
                                     </Link>
 
                                     <div className="pre-inf-cont">

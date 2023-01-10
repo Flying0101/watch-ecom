@@ -31,7 +31,6 @@ function Collection() {
 
 
 
-
     const navStyle = {
         color: 'black',
 
@@ -51,7 +50,7 @@ function Collection() {
                             {steelWatches.map((dat) => (
                                 <div className="wa-sub-con">
                                     <Link style={navStyle} to={`/preview/${dat.id}`}>
-                                        <img src={dat.image} className="wa-img" />
+                                        <img alt="watch displayed" src={dat.image} className="wa-img" />
 
                                     </Link>
                                     <div className="w">
@@ -78,7 +77,7 @@ function Collection() {
                             {diverWatches.map((dat) => (
                                 <div className="wa-sub-con">
                                     <Link style={navStyle} to={`/preview/${dat.id}`}>
-                                        <img src={dat.image} className="wa-img" />
+                                        <img alt="watch displayed" src={dat.image} className="wa-img" />
                                     </Link>
                                     <div className="w">
                                         <p className="watch-name">{dat.name}</p>

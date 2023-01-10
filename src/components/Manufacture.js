@@ -67,7 +67,7 @@ function Manufacture() {
                     <span id="ms-inf"> The process starts during the design phase of a new product. A list is drawn up of the stresses that the watch is likely to have to withstand. Purely virtual and based on a product-use scenario, this first step provides a broad overview of the risks, which are then organized into the order in which the issues should be approached. Simulations can then be programmed.</span> </p>
                 <div className="mount-pic">
 
-                    <img src={MONT} className="mo-img" />
+                    <img alt="building a watch" src={MONT} className="mo-img" />
 
                 </div>
 
@@ -79,7 +79,7 @@ function Manufacture() {
                         </div>
                         <div className="mon-div">
 
-                            <img src={MONT2} className="mon-img" />
+                            <img alt="watch dial" src={MONT2} className="mon-img" />
                         </div>
 
                     </div>
