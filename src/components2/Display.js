@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { useState, useEffect, useMemo } from 'react';
-import { useRecoilState, useRecoilValue } from 'recoil';
+import { useMemo } from 'react';
+import { useRecoilState } from 'recoil';
 import { Link } from "react-router-dom";
 import '../css2/Display.css';
 

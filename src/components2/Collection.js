@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-import { useState, useEffect, useMemo } from 'react';
-import { useRecoilState, useRecoilValue } from 'recoil';
+import { useMemo } from 'react';
+import { useRecoilState } from 'recoil';
 
 import '../css2/Collection.css';
 
