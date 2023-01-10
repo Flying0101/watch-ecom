@@ -13,3 +13,26 @@
     height: 100%;
     z-index: -10;
 }
+
+
+.home-slogan-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: 95%;
+    text-align: center;
+}
+
+
+.home-slogan {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+}
+
+
+
+.home-sub-slogan {
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+}

@@ -6,6 +6,7 @@
     height: 90px;
     top: 0;
     color: white;
+    transition: all 0.7s ease;
 
 
 
@@ -25,6 +26,7 @@
     background: rgba(255, 255, 255, 0.837);
     transition-duration: 0.7s;
     color: black;
+
 }
 
 
@@ -87,6 +89,7 @@
     letter-spacing: 1px;
     padding-right: 30px;
     text-decoration: none;
+    transition: all 0.7s ease;
 
 }
 
@@ -108,7 +111,7 @@
     position: absolute;
     right: -15%;
     top: -65%;
-    color: red;
+    color: white;
 }
 
 
@@ -137,6 +140,7 @@
 .burger-bar {
     position: absolute;
     right: 0;
+    top: 0;
     width: 90%;
     height: 100%;
     background: rgb(24, 24, 24);
