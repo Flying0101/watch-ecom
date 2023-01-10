@@ -12,7 +12,7 @@ function Product() {
 
     const params = useParams();
     const dataInfo = useRecoilValue(data);
-    const watch = dataInfo.find(project => project.id == params.id)
+    const watch = dataInfo.find(project => project.id === Number(params.id))
 
     console.log(watch);
 
