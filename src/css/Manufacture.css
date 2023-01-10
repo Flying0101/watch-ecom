@@ -1,0 +1,166 @@
+.Manufacture-section {
+    width: 100%;
+    padding: 2em 0;
+
+}
+
+.manu-slogan {
+    text-align: center;
+    height: 5%;
+    font-size: clamp(1.5rem, 4vw, 2.7rem);
+
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+
+.manu-img-con {
+    width: 100%;
+    height: 15%;
+}
+
+.manu-img {
+    width: 100%;
+    margin: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    display: blocK;
+}
+
+
+.manu-img-con2 {
+    width: 100%;
+    height: 15%;
+}
+
+.manu-img2 {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    display: blocK;
+}
+
+
+.m-intro {
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.m-int-container {
+
+    position: relative;
+    width: max(80%, 830px);
+    height: 45%;
+    align-items: center;
+
+
+}
+
+.m-intro-hdr {
+    position: relative;
+    font-size: clamp(1.3rem, 2vw, 2rem);
+    letter-spacing: 1.5px;
+    padding-bottom: 10px;
+
+}
+
+.m-intro-inf {
+
+    position: relative;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+
+}
+
+
+
+.manu-img-con {
+    width: 100%;
+    height: 15%;
+}
+
+
+.fac-img-container {
+    width: 100%;
+}
+
+
+.fac-img1 {
+    width: 100%;
+    margin: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    display: blocK;
+}
+
+.watch-fac-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+}
+
+.fac-w-img {
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fac-w-img1 {
+    width: 100%;
+    margin: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    display: blocK;
+}
+
+.fac-info{
+    position: relative;
+    width: 80%;
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    letter-spacing: 0.7px;
+}
+
+@media screen and (max-width: 500px) {
+
+    .m-int-container {
+
+        position: relative;
+        width: max(80%, 830px);
+
+
+    }
+
+}
+
+
+@media screen and (max-width: 1050px) {
+    .watch-fac-container {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    
+    }
+    .fac-info{
+        padding-top: 15px;
+        position: relative;
+        width: 100%;
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
+        line-height: 1.3rem;
+        letter-spacing: 0.7px;
+    }
+    
+   
+}

@@ -1,0 +1,278 @@
+
+
+.Navigation {
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    color: white;
+
+
+
+    display: flex;
+
+    align-items: center;
+
+    z-index: 1;
+
+}
+
+.diss {
+    display: none;
+}
+
+.Navigation:hover {
+    background: rgba(255, 255, 255, 0.837);
+    transition-duration: 0.7s;
+    color: black;
+}
+
+
+.nav-ul {
+
+    position: relative;
+    display: flex;
+    left: 5%;
+
+    list-style-type: none;
+}
+
+.nav-logo {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 3rem;
+
+}
+
+.nav-ul-two {
+
+    position: absolute;
+    display: flex;
+
+    right: 5%;
+
+    list-style-type: none;
+
+}
+
+.link-css {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.home-link {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.Navigation:hover .link-css,
+.Navigation:hover .home-link {
+    color: black;
+    transition-duration: 0.3s;
+
+}
+
+.nav-links {
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-right: 30px;
+    text-decoration: none;
+
+}
+
+.nav-links:hover {
+
+    font-size: 1rem;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+
+.shop-logo {
+    width: 25px;
+    height: 25px;
+}
+
+.shop-qty {
+    display: flex;
+    position: absolute;
+    right: -15%;
+    top: -65%;
+    color: red;
+}
+
+
+.navbar-mobile {
+
+    width: 30px;
+    height: 30px;
+}
+
+.shop-logo:hover {
+    width: 28px;
+    height: 28px;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+
+
+.navbar-mobile:hover {
+    width: 33px;
+    height: 33px;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+
+
+.burger-bar {
+    position: absolute;
+    right: 0;
+    width: 90%;
+    height: 100%;
+    background: rgb(24, 24, 24);
+    color: white;
+    z-index: 1;
+
+}
+
+.burg-close {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+.burg-close:hover {
+    font-size: 1.6rem;
+    color: rgb(207, 0, 0);
+}
+
+.burg-logo {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 2.5rem;
+    text-align: center;
+
+
+}
+
+.burg-ul {
+    position: relative;
+    letter-spacing: 1px;
+    list-style-type: none;
+    line-height: 2rem;
+    width: 150px;
+}
+
+
+.burg-links {
+    font-family: sans-serif;
+    font-size: 0.9rem;
+}
+
+.burg-links:hover {
+    font-size: 1rem;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.line-breaker {
+    position: relative;
+    top: 5%;
+    border-top: 2px solid rgb(173, 173, 173);
+    width: 95%;
+    left: 50%;
+    transform: translate(-50%);
+    border-bottom: 1px solid rgb(173, 173, 173);
+    height: 25%;
+
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+
+.burg-nav-img {
+    position: relative;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    height: 30%;
+
+}
+
+.nav-img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    display: blocK;
+}
+
+.burg-nav-footer {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    font-size: 0.9rem;
+
+    top: 92%;
+    border-top: 1px solid rgb(173, 173, 173);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(231, 231, 231);
+    letter-spacing: 1px;
+
+}
+
+.se-flag {
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    top: 88%;
+}
+
+
+
+@media (min-width: 750px) {
+    .shop-logo {
+        display: none;
+    }
+    .shop-qty{
+        display: none;
+    }
+
+
+    .navbar-mobile {
+        display: none;
+    }
+
+
+
+}
+
+
+@media (max-width: 750px) {
+    .nav-links {
+        display: none;
+    }
+
+
+
+
+}

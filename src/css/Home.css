@@ -1,0 +1,15 @@
+.home-section {
+    width: 100%;
+    height: 100vh;
+}
+
+#home-video {
+    position: relative;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}

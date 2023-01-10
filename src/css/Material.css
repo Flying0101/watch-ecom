@@ -1,0 +1,67 @@
+.Material-section {
+    width: 100%;
+    padding: 5em 0;
+}
+
+.material-slogan {
+    text-align: center;
+    height: 7%;
+    font-size: clamp(1.5rem, 4vw, 2.7rem);
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+
+.m-grid-container {
+    width: 90%;
+    height: 37%;
+}
+
+
+.material-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+}
+
+
+.mg-div {
+    width: 100%;
+}
+
+.mgd-inf {
+    text-align: center;
+    width: 90%;
+    font-size: clamp(0.9rem, 3vw, 1.4rem);
+    letter-spacing: 1px;
+
+}
+
+
+.mg-img {
+    width: 100%;
+    margin: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    display: blocK;
+
+}
+
+
+
+@media screen and (max-width: 1150px) {
+
+
+
+    .material-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 20px;
+    }
+
+    
+}

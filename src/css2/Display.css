@@ -1,0 +1,164 @@
+.Display-section {
+    width: 100%;
+    padding: 4em 0;
+
+}
+
+.dis-inf-container {
+    position: relative;
+    width: 100%;
+    height: 17%;
+    top: 2%;
+    color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dis-inf-sub-con {
+    width: max(75%, 800px);
+}
+
+.dis-inf {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    padding-bottom: 15px;
+    letter-spacing: 7px;
+    font-family: sans-serif;
+
+}
+
+.dis-sub-inf {
+
+    font-size: clamp(1rem, 4vw, 1.2rem);
+
+    font-family: sans-serif;
+
+}
+
+
+.few-container {
+    position: relative;
+    top: 8%;
+    width: 90%;
+    height: 35%;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+.few-w-hdr {
+    font-size: 1.5rem;
+
+}
+
+.few-w-display {
+    width: 100%;
+    height: 90%;
+    display: flex;
+
+
+}
+
+.few-w-scroll {
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.watch-scroll-con {
+    display: flex;
+    position: relative;
+    top: 10%;
+}
+
+
+.pre-w-cont {
+    min-width: 270px;
+    max-width: 271px;
+    height: 100%;
+    padding-right: 10px;
+}
+
+
+.pre-img {
+    width: 60%;
+    max-height: 90%;
+    border-radius: 10px;
+
+}
+
+.pre-w-name {
+    font-size: 1.1rem;
+
+}
+
+.pre-w-inf {
+    font-size: 0.9rem;
+
+}
+
+.brands-header {
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+
+
+}
+
+.w-brands {
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 1px solid black;
+
+    border-bottom: 1px solid black;
+
+
+}
+
+.brand-grid {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.brands {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.brand-img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    display: blocK;
+    object-position: center;
+}
+
+@media screen and (max-width: 990px) {
+
+    .brand-grid {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .brands {
+        position: relative;
+        width: 110px;
+        height: 100px;
+    }
+
+}
