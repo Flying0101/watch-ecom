@@ -12,7 +12,7 @@ function Product() {
 
     const params = useParams();
     const dataInfo = useRecoilValue(data);
-    const watch = dataInfo.find(project => project.id === params.id)
+    const watch = dataInfo.find(project => project.id == params.id)
 
     console.log(watch);
 
@@ -41,7 +41,7 @@ function Product() {
             <div className="product-grid">
 
                 <div className="pr-div-one">
-                    <img alt="choosen watch displayed" src={watch.image} className="pr-img" />
+                    <img alt="displayed watch" src={watch.image} className="pr-img" />
                 </div>
                 <div className="pr-div-two">
 

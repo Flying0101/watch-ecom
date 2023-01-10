@@ -20,7 +20,7 @@ import { cartdata } from '../store/cart';
 function Nav() {
 
     const [show, setShow] = useState(false);
-    const cartItem = useRecoilState(cartdata);
+    const [cartItem] = useRecoilState(cartdata);
 
     function toggle() {
 
