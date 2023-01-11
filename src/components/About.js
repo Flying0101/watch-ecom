@@ -3,13 +3,18 @@ import React from 'react';
 import '../css/About.css';
 import ST from '../image/sthlm.jpg';
 
+
+
+
 function About() {
 
 
     return (
         <div className="About-section">
 
-            <p className="about-his">- Our Story -</p>
+
+                <h1 className="about-his">━ Our Story ━</h1>
+
 
             <div className="a-grid-container">
                 <div className="about-grid">
@@ -18,7 +23,7 @@ function About() {
                     </div>
 
                     <div className="ag-div2">
-                        <h2 className="ag-header">T3 <br className="line-br" /> Stockholm</h2>
+                        <h2 className="ag-header">T3, <br className="line-br" /> Stockholm</h2>
                         <p className="ag-info">Experience our heritage, craftsmanship and connection to the world in our watches, which pays tribute to the craftspeople who have made what T3 is today, generation after generation.</p>
 
                         <p className="ag-btn"> ━━ Discover more</p>

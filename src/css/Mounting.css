@@ -1,30 +1,37 @@
 .Mounting-section {
     width: 100%;
-    padding: 2em;
+    padding: 2em 0 5em 0;
 }
-
 
 
 .mount-pic {
     position: relative;
     width: 100%;
-    height: 40%;
+    min-height: 700px;
+    margin-bottom: 40px;
+
 }
 
 .mo-img {
-
     width: 100%;
+    min-height: 700px;
     margin: auto;
     -o-object-fit: cover;
     object-fit: cover;
     display: blocK;
 }
 
+
+
 .mount-slogan {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -20%);
     color: white;
     z-index: 1;
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    width: max(40%, 280px);
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    width: max(40%, 315px);
     text-align: center;
 
     font-family: 'Times New Roman', Times, serif;
@@ -42,13 +49,11 @@
     display: flex;
     justify-content: center;
 
-
-
 }
 
 .mon-grid {
     position: relative;
-    width: 90%;
+    width: max(320px, 90%);
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -59,14 +64,16 @@
 .mon-div {
     position: relative;
     width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
 }
+
+
+
 
 .mon-img {
     width: 100%;
+    max-height: 350px;
     margin: auto;
     -o-object-fit: cover;
     object-fit: cover;
@@ -77,28 +84,26 @@
 .mon-info {
     position: relative;
     text-align: center;
-    width: 60%;
+    width: max(280px, 60%);
     font-size: 1.3rem;
+    margin: 0 auto;
 
 }
 
-
+.mon-text-wraper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 @media screen and (max-width: 1000px) {
     .mon-grid {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        row-gap: 100px;
+        row-gap: 40px;
 
     }
 
-    .mon-info {
-        position: relative;
-        text-align: center;
-        width: 90%;
-        font-size: 1.3rem;
-
-    }
 
 }

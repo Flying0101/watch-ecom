@@ -5,8 +5,7 @@ import Home from '../components/Home';
 import About from '../components/About';
 import Material from '../components/Material';
 import Manufacture from '../components/Manufacture';
-import Footer from '../components/Footer'; 
-
+import Footer from '../components/Footer';
 
 function Landing() {
 
@@ -16,7 +15,7 @@ function Landing() {
             <Home />
             <About />
             <Material />
-            <Manufacture /> 
+            <Manufacture />
             <Footer />
 
         </div>

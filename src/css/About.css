@@ -4,14 +4,59 @@
 
 }
 
+.text-video-container {
+    max-height: 150px;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+
+
+}
+
+#text-video {
+    width: 100%;
+    max-height: 170px;
+    position: absolute;
+    z-index: -999;
+    bottom: -160px;
+
+}
+
+
 .about-his {
     text-align: center;
     width: 100%;
     margin-bottom: 30px;
-    font-size: clamp(2rem, 5vw, 2.5rem);
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: lighter;
+    font-size: clamp(2rem, 5vw, 2.7rem);
+    font-weight: bold;
+    animation: myanimation 7.8s infinite;
+
 }
+
+
+
+@keyframes myanimation {
+   0% {
+      color: rgb(104, 104, 104);
+   }
+
+   25% {
+      color: rgb(153, 153, 153);
+   }
+
+   50% {
+      color: rgb(189, 161, 69);
+   }
+
+   75% {
+      color: rgb(119, 118, 116);
+   }
+
+   100% {
+      color: rgb(173, 131, 14);
+   }
+}
+
 
 .a-grid-container {
     position: relative;
@@ -27,7 +72,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
 
-    background: #fffde7c4;
+    background: rgb(247, 247, 247);
     box-shadow: 0 0 20px rgb(170, 170, 170);
 }
 
@@ -46,7 +91,6 @@
 
 .ag-header {
     width: 100%;
-    font-family: 'Courier New', Courier, monospace;
 
     font-weight: lighter;
     font-size: clamp(2rem, 4vw, 4.5rem);
@@ -60,7 +104,6 @@
 
 .ag-info {
     font-size: clamp(1rem, 1.65vw, 1.8rem);
-    font-family: Georgia, 'Times New Roman', Times, serif;
     letter-spacing: 1px;
 
     margin-bottom: 5px;
@@ -70,7 +113,6 @@
 
 .ag-btn {
     font-size: 1.3rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .sthlm-pic {

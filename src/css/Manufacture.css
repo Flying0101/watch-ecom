@@ -1,8 +1,9 @@
 .Manufacture-section {
     width: 100%;
-    padding: 2em 0;
+    padding: 7em 0;
 
 }
+
 
 .manu-slogan {
     text-align: center;
@@ -11,16 +12,19 @@
 
     font-family: sans-serif;
     font-weight: lighter;
+    margin: 20px 0;
 }
 
 
 .manu-img-con {
     width: 100%;
-    height: 15%;
+    height: 300px;
 }
 
 .manu-img {
     width: 100%;
+    height: 300px;
+
     margin: auto;
     -o-object-fit: cover;
     object-fit: cover;
@@ -30,12 +34,14 @@
 
 .manu-img-con2 {
     width: 100%;
-    height: 15%;
+    height: 300px;
+
 }
 
 .manu-img2 {
     width: 100%;
-    height: 100%;
+    height: 300px;
+
     margin: auto;
     -o-object-fit: cover;
     object-fit: cover;
@@ -60,6 +66,7 @@
     width: max(80%, 830px);
     height: 45%;
     align-items: center;
+    margin: 50px 0;
 
 
 }
@@ -91,7 +98,6 @@
     width: 100%;
 }
 
-
 .fac-img1 {
     width: 100%;
     margin: auto;
@@ -101,6 +107,8 @@
 }
 
 .watch-fac-container {
+    margin: 0 auto;
+    margin-top: 7em;
     width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -110,27 +118,29 @@
 
 .fac-w-img {
     width: 90%;
+    margin: 0 auto;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .fac-w-img1 {
     width: 100%;
+    height: 100%;
     margin: auto;
     -o-object-fit: cover;
     object-fit: cover;
     display: blocK;
 }
 
-.fac-info{
+
+.fac-info {
+    margin-top: 10px;
     position: relative;
     width: 80%;
-    font-size: 1.2rem;
-    line-height: 1.3rem;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    line-height: 1.5rem;
     letter-spacing: 0.7px;
 }
+
 
 @media screen and (max-width: 500px) {
 
@@ -147,20 +157,20 @@
 
 @media screen and (max-width: 1050px) {
     .watch-fac-container {
-        width: 80%;
+        width: max(315px, 80%);
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-    
+        grid-template-rows: auto 1fr;
+        text-align: center;
+        row-gap: 25px;
+
     }
-    .fac-info{
-        padding-top: 15px;
-        position: relative;
+
+    .fac-info {
         width: 100%;
-        font-size: clamp(0.9rem, 2vw, 1.2rem);
-        line-height: 1.3rem;
-        letter-spacing: 0.7px;
+        margin: 0 auto;
+        margin-top: 10px;
     }
-    
-   
+
+
 }
