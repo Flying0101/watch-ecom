@@ -12,8 +12,8 @@ function Footer() {
         <footer className="footer-section">
             <div className="f-contact-container">
                 <div className="f-c-div">
-                    <h2 className="f-c-header">Why not invest in a new watch</h2>
-                    <p className="f-c-inf">take a look on our new watches! </p>
+                    <h2 className="f-c-header">Invest in a good watch</h2>
+                    <p className="f-c-inf">take a look at our new watches! </p>
                 </div>
 
                 <button className="f-c-btn">Contact us</button>
@@ -23,21 +23,23 @@ function Footer() {
                 <div className="f-l-div">
                     <h3 className="f-l-header">About us</h3>
                     <ul className="f-l-ul">
-                        <li className="f-l-lis">we love lambos thats why we sell this service to afford a lambo lets goo</li>
+                        <li className="f-l-lis">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</li>
                     </ul>
                 </div>
                 <div className="f-l-div">
                     <h3 className="f-l-header">About us</h3>
                     <ul className="f-l-ul">
-                        <li className="f-l-lis">we love lambos thats why we sell this service to afford a lambo lets goo</li>
+                        <li className="f-l-lis">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</li>
                     </ul>
                 </div>
                 <div className="f-l-div">
                     <h3 className="f-l-header">About us</h3>
                     <ul className="f-l-ul">
-                        <li className="f-l-lis">we love lambos thats why we sell this service to afford a lambo lets goo</li>
+                        <li className="f-l-lis">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</li>
                     </ul>
                 </div>
+
+
             </div>
 
             <div className="f-bottom-container">

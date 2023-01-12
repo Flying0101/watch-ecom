@@ -40,8 +40,6 @@ function Collection() {
         <div className="Collection-section">
             <p className="collection-header">THE COLLECTION</p>
 
-
-
             <div className="watch-c-container">
                 <p className="c-header">- Steel WATCHES</p>
                 <div className="watch-collection">

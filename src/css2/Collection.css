@@ -4,24 +4,17 @@
 }
 
 .collection-header {
-
     width: 100%;
     text-align: center;
-
     font-size: 2rem;
-
+    margin-bottom: 2em;
 }
 
 .watch-c-container {
     position: relative;
     width: 95%;
-    height: 25%;
-    top: 5%;
-
-    left: 50%;
-    transform: translate(-50%);
-
-
+    margin: 0 auto;
+    margin-bottom: 7em;
 }
 
 .watch-container-two {

@@ -1,8 +1,10 @@
 .Display-section {
     width: 100%;
-    padding: 4em 0;
+    padding: 4em 0 7em 0;
 
 }
+
+
 
 .dis-inf-container {
     position: relative;
@@ -10,27 +12,51 @@
     height: 17%;
     top: 2%;
     color: black;
+    margin-bottom: 7em;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .dis-inf-sub-con {
-    width: max(75%, 800px);
+    width: max(300px, 75%);
+    margin: 0 auto;
 }
 
+
 .dis-inf {
-    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-size: clamp(1.2rem, 4vw, 2.1rem);
     padding-bottom: 15px;
     letter-spacing: 7px;
     font-family: sans-serif;
-
+    font-weight: bold;
+    animation: displayanimation 7.8s infinite;
 }
+
+@keyframes displayanimation {
+    0% {
+        color: rgb(0, 0, 0);
+    }
+
+    25% {
+        color: rgb(37, 52, 122);
+    }
+
+    50% {
+        color: rgb(115, 121, 133);
+    }
+
+    75% {
+        color: rgb(0, 17, 65);
+    }
+
+    100% {
+        color: rgb(92, 98, 109);
+    }
+}
+
 
 .dis-sub-inf {
 
-    font-size: clamp(1rem, 4vw, 1.2rem);
+    font-size: clamp(1rem, 4vw, 1.5rem);
 
     font-family: sans-serif;
 
@@ -44,6 +70,7 @@
     height: 35%;
     left: 50%;
     transform: translate(-50%);
+    margin-bottom: 8em;
 
 }
 
@@ -111,16 +138,12 @@
 .w-brands {
     width: 100%;
     height: 20%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     border-top: 1px solid black;
-
     border-bottom: 1px solid black;
-
-
+    margin-bottom: 3em;
 }
 
 .brand-grid {

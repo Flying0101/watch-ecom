@@ -52,7 +52,7 @@ function Display() {
         <div className="Display-section">
             <div className="dis-inf-container">
                 <div className="dis-inf-sub-con">
-                    <p className="dis-inf">EXPLORE THE T3 COLLECTION OF PRESTIGIOUS, <br /> HIGH-PRECISION TIMEPIECES</p>
+                    <p className="dis-inf">EXPLORE THE T3 COLLECTION OF PRESTIGIOUS <br /> HIGH-PRECISION TIMEPIECES</p>
                     <p className="dis-sub-inf">We offer a wide assortment of oyster perpetual and Cellini watches to suit any wrist. Discover the broad selection of T3 watches to find a perfect combination of style and functionality</p>
                 </div>
             </div>
