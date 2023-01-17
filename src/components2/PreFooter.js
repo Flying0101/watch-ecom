@@ -14,7 +14,7 @@ function Footer() {
             <div className="f-contact-container">
                 <div className="f-c-div">
                     <h2 className="f-c-header">Invest in a good watch</h2>
-                    <p className="f-c-inf">take a look at our new watches! </p>
+                    <p className="f-c-inf">We give 5 years guarantee on all of our watches! </p>
                 </div>
 
             </div>
