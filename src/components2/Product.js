@@ -36,6 +36,8 @@ function Product() {
 
     console.log(cartItem);
 
+
+    // maybe add specifikation to watches
     return (
         <div className="Product-section">
 
@@ -52,7 +54,7 @@ function Product() {
 
                 <div className="pr-div-two">
 
-                    <div>
+                    <div className="pr-wraper-two">
                         <p className="pr-limited">LIMITED INVENTORY</p>
                         <p className="pr-name">{watch.name} {watch.sort}</p>
                         <p className="pr-type">AUTOMATIC CHRONOGRAPH</p>
@@ -65,7 +67,7 @@ function Product() {
                             <button className={show ? "dissapear" : "buy-btn"} onClick={() => AddToCart(watch)}>ADD TO CART</button>
                             {show ? (<Lottie animationData={checked} loop={false} className={show ? "btn-anim" : "dissapear"} />) : ("")}
 
-                            <p className="pr-price">{watch.price}.00 kr</p>
+                            <p className="pr-price">{watch.price.toLocaleString()} kr</p>
 
                         </div>
                     </div>

@@ -57,6 +57,10 @@
     align-items: center;
 }
 
+.pr-wraper-two{ 
+    width: 100%;
+}
+
 .pr-limited {
 
     font-size: 1rem;
@@ -124,8 +128,8 @@
 }
 
 .pr-info {
-    width: 90%;
-    font-size: 1.2rem;
+    font-size: clamp(1.1rem, 4vw, 1.2rem);
+    max-width: 650px;
 }
 
 .btn-anim {
@@ -144,6 +148,7 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr;
+        row-gap: 30px;
 
     }
 
