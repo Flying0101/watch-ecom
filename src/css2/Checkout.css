@@ -59,17 +59,21 @@
 .pr-details {
     margin-right: auto;
     margin-left: 7.5%;
+    color: #6b6b6b;
+
 }
 
 .qty {
     margin-right: auto;
     margin-left: 22%;
+    color: #6b6b6b;
 
 }
 
 .price {
     margin-right: 10.5%;
     margin-left: auto;
+    color: #6b6b6b;
 
 }
 
@@ -105,6 +109,7 @@
 
 .check-img {
     max-width: 80px;
+    min-width: 50px;
     object-fit: contain;
     margin: 0;
     margin-right: 15px;
@@ -112,7 +117,7 @@
 
 .check-name {
     padding-top: 10px;
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 5vw, 1.3rem);
     padding-bottom: 5px;
     font-family: sans-serif;
 }
@@ -124,8 +129,7 @@
 }
 
 .delete-btn {
-    position: absolute;
-    bottom: 0;
+    position: relative;
     max-width: 100%;
     background: none;
     border: none;
@@ -213,7 +217,7 @@
 
 
 .checkout-container {
-    background: #ececec;
+    background: rgb(247, 247, 247);
 }
 
 .total-checkout-wraper {
@@ -327,6 +331,10 @@
 
     .qty {
         display: none;
+    }
+
+    .check-price {
+        margin-top: 10px;
     }
 
 }

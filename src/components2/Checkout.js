@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 import { useState, useEffect } from 'react';
 import { useRecoilState } from 'recoil';
@@ -103,9 +104,11 @@ function Checkout() {
 
                         </ScrollToBottom>
 
-
                     </div >
-                    <p className="continue-shop"> ← Continue Shopping</p>
+                    <Link className="link-css" to='/watches'>
+                        <p className="continue-shop"> ← Continue Shopping</p>
+
+                    </Link>
                 </div>
 
                 <div className="checkout-container">
