@@ -114,7 +114,13 @@
     width: 60%;
     max-height: 90%;
     border-radius: 10px;
+    border: none;
+    transition: all 0.2s ease;
+}
 
+
+.pre-img:hover {
+    border: 4px solid #C0C0C0;
 }
 
 .pre-w-name {

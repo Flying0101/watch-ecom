@@ -57,8 +57,13 @@
     width: 60%;
     max-height: 90%;
     border-radius: 10px;
+    transition: all 0.2s ease;
 }
 
+
+.wa-img:hover {
+    border: 4px solid #C0C0C0;
+}
 
 .watch-name {
 
