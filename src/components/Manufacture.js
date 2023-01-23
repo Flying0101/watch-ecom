@@ -3,8 +3,6 @@ import React from 'react';
 
 import '../css/Manufacture.css';
 import '../css/Mounting.css';
-import MFW from '../image/Mfacture1.jpg';
-import MFF from '../image/Mfacture2.jpg';
 
 import MFK from '../image/Mfacture.jpg';
 import FAC from '../image/FactureOne.jpg';
@@ -21,7 +19,7 @@ function Manufacture() {
     return (
         <div>
             <div className="Manufacture-section">
-               
+
                 <div className="m-intro">
                     <div className="m-int-container">
                         <p className="m-intro-hdr">THE QUALITY OF A T3 WATCH IS THE RESULT OF A STRICT <br /> METHODOLOGY.</p>
@@ -72,7 +70,7 @@ function Manufacture() {
                         <div className="mon-div">
                             <div className="mon-text-wraper">
                                 <h1>Assemble</h1>
-                                <br/>
+                                <br />
                                 <p className="mon-info">Staff in white coats, computerized workbenches, an atmosphere of quiet composure and dedication to the quality of work in a T3 workshop, the concentration is palpable. Here, T3 watchmakers perpetuate the time-honoured traditions of their art while every day taking it to new realms using the state-of-the-art equipment and processes at their disposal.</p>
                             </div>
                         </div>
