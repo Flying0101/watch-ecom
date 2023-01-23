@@ -14,6 +14,7 @@ function Checkout() {
 
     const [cartItem, setCartItem] = useRecoilState(cartdata);
     const [totalCost, setTotalCost] = useState(0);
+    const [shipCost, setShipCost] = useState(0);
 
 
     useEffect(() => {
@@ -57,6 +58,17 @@ function Checkout() {
         setCartItem(deletedList)
 
     }
+
+
+    function DeliveryPrice(e) {
+        const shipPrice = e.target.value;
+        setShipCost(Number(shipPrice));
+          
+    }
+
+
+
+
 
     return (
         <div className="Checkout-page">
@@ -121,8 +133,11 @@ function Checkout() {
                         </div>
 
                         <p className="check-ship">SHIPPING</p>
-                        <select className="c-ship-select">
-                            <option className="c-s-option">Standard Delivery - 349 kr</option>
+                        <select className="c-ship-select" onChange={(e) => DeliveryPrice(e)}>
+                            <option className="c-s-option" value="">CHOOSE DELIVERY</option>
+                            <option className="c-s-option" value="349">Standard Delivery - 349 kr</option>
+                            <option className="c-s-option" value="749">Home Delivery - 749 kr</option>
+                            <option className="c-s-option" value="10199">Premium Delivery - 10 199 kr</option>
                         </select>
 
                         <p className="check-promo-h">Promo code</p>
@@ -131,7 +146,7 @@ function Checkout() {
 
                         <div className="check-total-wrap">
                             <p className="c-total-h">TOTAL COST</p>
-                            <p className="c-total-price"> {totalCost.toLocaleString()} kr</p>
+                            <p className="c-total-price"> {(totalCost + shipCost).toLocaleString()} kr</p>
                         </div>
 
                         <button className="c-total-btn">CHECKOUT</button>

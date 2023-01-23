@@ -29,32 +29,32 @@
     margin-bottom: 30px;
     font-size: clamp(2rem, 5vw, 2.7rem);
     font-weight: bold;
-    animation: myanimation 7.8s infinite;
+    animation: myanimation 5.7s infinite;
 
 }
 
 
 
 @keyframes myanimation {
-   0% {
-      color: rgb(104, 104, 104);
-   }
+    0% {
+        color: rgb(104, 104, 104);
+    }
 
-   25% {
-      color: rgb(153, 153, 153);
-   }
+    25% {
+        color: rgb(153, 153, 153);
+    }
 
-   50% {
-      color: rgb(189, 161, 69);
-   }
+    50% {
+        color: rgb(153, 153, 153);
+    }
 
-   75% {
-      color: rgb(119, 118, 116);
-   }
+    75% {
+        color: rgb(119, 118, 116);
+    }
 
-   100% {
-      color: rgb(173, 131, 14);
-   }
+    100% {
+        color: rgb(104, 104, 104);
+    }
 }
 
 
@@ -72,55 +72,67 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
 
-    background: rgb(247, 247, 247);
+    background: rgb(230, 230, 230);
     box-shadow: 0 0 20px rgb(170, 170, 170);
 }
 
 
-
-.ag-div2 {
-
-    width: 90%;
-    margin-left: auto;
-    margin-right: 0;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 15px;
-
+.ag-p {
+    position: relative;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    transition: all 0.4s ease;
+    padding: 5px 15px;
+    border-radius: 15px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.ag-header {
-    width: 100%;
-
-    font-weight: lighter;
-    font-size: clamp(2rem, 4vw, 4.5rem);
-    left: 35px;
-    letter-spacing: 5px;
-    margin-bottom: 25px;
 
 
-
-}
-
-.ag-info {
-    font-size: clamp(1rem, 1.65vw, 1.8rem);
-    letter-spacing: 1px;
-
-    margin-bottom: 5px;
+.ag-p:hover {
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: black;
+    background: rgb(255, 255, 255);
 
 }
 
 
-.ag-btn {
-    font-size: 1.3rem;
-}
 
 .sthlm-pic {
-    max-width: 100%;
+    width: 50%;
     margin: auto;
-    -o-object-fit: contain;
-    object-fit: contain;
+    -o-object-fit: cover;
+    object-fit: cover;
     display: blocK;
+}
+
+
+.sthlm-pic {
+    width: 50%;
+    margin: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    display: blocK;
+}
+
+.ag-div {
+    transition: all 0.3s ease;
+}
+
+.ag-div:hover {
+    background: white;
+    cursor: pointer;
+}
+
+
+.ag-div:active {
+    background: white;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1100px) {
@@ -140,17 +152,6 @@
 
 
 
-    .line-br {
-        display: none;
-    }
-
-
-    .ag-div2 {
-
-        width: 100%;
-        margin: 0;
-
-    }
 
 
 }

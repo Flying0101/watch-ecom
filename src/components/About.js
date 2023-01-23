@@ -1,7 +1,8 @@
 import React from 'react';
 
 import '../css/About.css';
-import ST from '../image/sthlm.jpg';
+import ST from '../image/gold-a.png';
+import ST2 from '../image/audemars.png';
 
 
 
@@ -13,20 +14,19 @@ function About() {
         <div className="About-section">
 
 
-                <h1 className="about-his">━ Our Story ━</h1>
+            <h1 className="about-his">COLLECTIONS</h1>
 
 
             <div className="a-grid-container">
                 <div className="about-grid">
                     <div className="ag-div">
+                        <p className="ag-p">GOLD</p>
                         <img alt="stockholm" src={ST} className="sthlm-pic" />
                     </div>
 
-                    <div className="ag-div2">
-                        <h2 className="ag-header">T3, <br className="line-br" /> Stockholm</h2>
-                        <p className="ag-info">Experience our heritage, craftsmanship and connection to the world in our watches, which pays tribute to the craftspeople who have made what T3 is today, generation after generation.</p>
-
-                        <p className="ag-btn"> ━━ Discover more</p>
+                    <div className="ag-div">
+                        <p className="ag-p">STEEL</p>
+                        <img alt="stockholm" src={ST2} className="sthlm-pic" />
                     </div>
                 </div>
             </div>

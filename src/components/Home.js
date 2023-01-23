@@ -2,7 +2,7 @@ import React from 'react';
 
 
 import '../css/Home.css';
-import homepageVideo from '../video/watch-video.mp4';
+import homepageVideo from '../video/MASTER.mp4';
 
 function Home() {
 
