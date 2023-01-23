@@ -18,14 +18,12 @@
 
 .manu-img-con {
     width: 100%;
-    height: 300px;
+    height: 150px;
 }
 
 .manu-img {
     width: 100%;
-    height: 300px;
-
-    margin: auto;
+    height: 150px;
     -o-object-fit: cover;
     object-fit: cover;
     display: blocK;
@@ -34,15 +32,16 @@
 
 .manu-img-con2 {
     width: 100%;
-    height: 300px;
+    height: 150px;
+    margin-right: 0;
+    margin-left: auto;
 
 }
 
 .manu-img2 {
     width: 100%;
-    height: 300px;
+    height: 150px;
 
-    margin: auto;
     -o-object-fit: cover;
     object-fit: cover;
     display: blocK;

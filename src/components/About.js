@@ -10,7 +10,7 @@ import ST2 from '../image/audemars.png';
 function About() {
 
 
-    return (
+    return ( 
         <div className="About-section">
 
 

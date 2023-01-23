@@ -21,13 +21,7 @@ function Manufacture() {
     return (
         <div>
             <div className="Manufacture-section">
-                <p className="manu-slogan">FROM PROTOTYPE TO FINISHED WATCHES</p>
-                <div className="manu-img-con">
-                    <img alt="watch part" src={MFF} className="manu-img" />
-                </div>
-                <div className="manu-img-con2">
-                    <img alt="watch gold link" src={MFW} className="manu-img2" />
-                </div>
+               
                 <div className="m-intro">
                     <div className="m-int-container">
                         <p className="m-intro-hdr">THE QUALITY OF A T3 WATCH IS THE RESULT OF A STRICT <br /> METHODOLOGY.</p>

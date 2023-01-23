@@ -6,37 +6,76 @@
     box-shadow: 0 0 20px rgb(170, 170, 170);
 }
 
+
+.m-container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+.mg-div {
+    max-width: 800px;
+    display: flex;
+    margin: 0 auto;
+    transition: all 10.8s ease;
+}
+
+
+.mg-wraper {
+    height: fit-content;
+    margin: auto 0;
+
+}
+
+
+.mg-p {
+    height: fit-content;
+    margin: auto 0;
+    right: 0;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin-right: 10px;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+}
+
+
+.mg-btn {
+    font-size: clamp(1rem, 4vw, 1.2rem)
+}
+
+
+.mg-btn:hover {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+
+
+.mg-img {
+    min-height: 350px;
+    min-width: 100px;
+    max-width: 550px;
+    margin: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    display: blocK;
+
+
+}
+
 .material-slogan {
     text-align: center;
     font-size: clamp(1.5rem, 4vw, 2.7rem);
     font-weight: bold;
     margin-bottom: 30px;
 
-    background: -webkit-linear-gradient(-45deg, #000000 0, #ec910a 100%);
+    background: -webkit-linear-gradient(-45deg, #ec910a 0, #000000 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-}
-
-.m-grid-container {
-    width: max(315px, 90%);
-    margin: 0 auto;
-}
+    letter-spacing: 0.1em;
 
 
-.material-grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    -moz-column-gap: 10px;
-    column-gap: 10px;
-}
-
-
-.mg-div {
-    width: 100%;
 }
 
 .mgd-inf {
@@ -44,34 +83,18 @@
     width: 90%;
     margin: 0 auto;
     font-size: clamp(1.1rem, 3vw, 1.4rem);
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
     line-height: 1.5rem;
-
 }
 
-.mg-img {
+
+
+.mg-img-two {
+    margin-top: 20px;
     width: 100%;
-    margin: auto;
-    -o-object-fit: contain;
-    object-fit: contain;
-    display: blocK;
-    border-radius: 30px;
-
-
-}
-
-
-
-@media screen and (max-width: 1150px) {
-
-
-
-    .material-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr auto auto;
-        row-gap: 20px;
-    }
-
+    height: 150px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    object-position: 10% 48%;
 
 }
