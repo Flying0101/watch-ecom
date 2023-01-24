@@ -84,8 +84,15 @@ function Nav() {
                     <Link style={navStyle} to='/watches'>
                         <li className="burg-links" onClick={() => reset()} >WATCHES</li>
                     </Link>
-                    <li className="burg-links" onClick={() => reset()}>MATERIALS</li>
-                    <li className="burg-links" onClick={() => reset()}>ABOUT</li>
+                    <Link style={navStyle} to='/watches'>
+
+                        <li className="burg-links" onClick={() => reset()}>MATERIALS</li>
+                    </Link>
+                    <Link style={navStyle} to='/watches'>
+
+                        <li className="burg-links" onClick={() => reset()}>ABOUT</li>
+                    </Link>
+
                 </ul>
             </div>
 
