@@ -7,8 +7,6 @@ import '../css/Mounting.css';
 import MFK from '../image/Mfacture.jpg';
 import FAC from '../image/FactureOne.jpg';
 import MONT from '../image/testing.jpg';
-import MONT2 from '../image/testing2.jpg';
-
 
 
 
@@ -66,17 +64,14 @@ function Manufacture() {
 
                 <div className="mon-container">
 
-                    <div className="mon-grid">
-                        <div className="mon-div">
-                            <div className="mon-text-wraper">
-                                <h1>Assemble</h1>
-                                <br />
-                                <p className="mon-info">Staff in white coats, computerized workbenches, an atmosphere of quiet composure and dedication to the quality of work in a T3 workshop, the concentration is palpable. Here, T3 watchmakers perpetuate the time-honoured traditions of their art while every day taking it to new realms using the state-of-the-art equipment and processes at their disposal.</p>
-                            </div>
-                        </div>
-                        <div className="mon-div">
+                    <div className="mon-i-div" >
+                        <div className="mon-btn-div">
+                            <div>
+                                <p className="mon-btn-h">T3 WATCHES</p>
+                                <button className="mon-btn">DISCOVER MORE</button>
 
-                            <img alt="watch dial" src={MONT2} className="mon-img" />
+                            </div>
+
                         </div>
 
                     </div>
