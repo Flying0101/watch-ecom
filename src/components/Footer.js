@@ -17,7 +17,7 @@ function Footer() {
                 <div className="f-l-div">
                     <h3 className="f-l-header">About us</h3>
                     <ul className="f-l-ul">
-                        <li className="f-l-lis">Established since 2022 <br />Our mission is to give you the best possible service and guide you.</li>
+                        <li className="f-l-lis">Established since 2022. <br /> <br />Our mission is to give you the best possible service.</li>
                     </ul>
                 </div>
                 <div className="f-l-div">
