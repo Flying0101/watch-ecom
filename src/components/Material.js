@@ -22,9 +22,9 @@ function Material() {
 
 
     return (
-        <div className="Material-section">
+        <div className="Material-section" >
 
-            <div className="m-container">
+            <div className="m-container" id="k">
 
                 {!showDiv ? (<div className="mg-div">
                     <div className="mg-wraper">

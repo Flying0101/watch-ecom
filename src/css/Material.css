@@ -22,6 +22,8 @@
 
 
 .mg-wraper {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     margin: auto 0;
 
@@ -29,6 +31,8 @@
 
 
 .mg-p {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     margin: auto 0;
     right: 0;
@@ -95,6 +99,7 @@
     height: 150px;
     -o-object-fit: cover;
     object-fit: cover;
-    object-position: 10% 48%;
+    -o-object-position: 10% 48%;
+       object-position: 10% 48%;
 
 }

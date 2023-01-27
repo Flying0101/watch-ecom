@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 
 import '../css/Manufacture.css';
@@ -13,6 +14,12 @@ import MONT from '../image/testing.jpg';
 
 
 function Manufacture() {
+
+
+
+    function scrollToTop() {
+        window.scrollTo(0, 0)
+    }
 
     return (
         <div>
@@ -68,7 +75,10 @@ function Manufacture() {
                         <div className="mon-btn-div">
                             <div>
                                 <p className="mon-btn-h">T3 WATCHES</p>
-                                <button className="mon-btn">DISCOVER MORE</button>
+                                <Link className="link-css" to='/watches'>
+                                    <button className="mon-btn" onClick={() => scrollToTop()}>DISCOVER MORE</button>
+
+                                </Link>
 
                             </div>
 

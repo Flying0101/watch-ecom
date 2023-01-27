@@ -16,10 +16,13 @@
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    grid-template-rows: 1fr;
-   column-gap: 55px;
+   -moz-column-gap: 55px;
+        column-gap: 55px;
 }
 
 .f-l-div {
+   width: -webkit-fit-content;
+   width: -moz-fit-content;
    width: fit-content;
 }
 
@@ -67,7 +70,15 @@
    font-size: clamp(0.9rem, 3vw, 1rem);
    min-width: 148px;
 
-   animation: myanimation 3s infinite;
+   -webkit-animation: myanimation 3s infinite;
+
+           animation: myanimation 3s infinite;
+}
+
+.f-b-btn:hover {
+   cursor: pointer;
+   border: 4px solid white;
+
 }
 
 

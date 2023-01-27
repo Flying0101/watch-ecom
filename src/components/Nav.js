@@ -44,16 +44,34 @@ function Nav() {
 
 
 
+    // fixa detta i framtiden, ingår ej i examensarbetet
+    //     <Link className="link-css" to='/' onClick={() => scrollMaterials()}>
+    //     <li className="nav-links">MATERIALS</li>
+
+    // </Link>
+    // <Link className="link-css" to='/' onClick={() => scrollAbout()}>
+    //     <li className="nav-links">ABOUT</li>
+    // </Link>
+    //     <Link style={navStyle} to='/watches'>
+
+    //     <li className="burg-links" onClick={() => reset()}>MATERIALS</li>
+    // </Link>
+    // <Link style={navStyle} to='/watches'>
+
+    //     <li className="burg-links" onClick={() => reset()}>ABOUT</li>
+    // </Link>
+
+
+
     return (<div>
         <div className={!show ? "Navigation" : "diss"}>
 
             <ul className="nav-ul">
                 <FaBars className="navbar-mobile" onClick={() => toggle()} />
                 <Link className="link-css" to='/watches'>
-                    <li className="nav-links">WATCHES</li>
+                    <li className="nav-links">WATCH COLLECTION</li>
                 </Link>
-                <li className="nav-links">MATERIALS</li>
-                <li className="nav-links">ABOUT</li>
+
             </ul>
             <Link className="home-link" to='/'>
                 <p className="nav-logo"  >T3</p>
@@ -82,16 +100,9 @@ function Nav() {
             <div className="line-breaker">
                 <ul className="burg-ul">
                     <Link style={navStyle} to='/watches'>
-                        <li className="burg-links" onClick={() => reset()} >WATCHES</li>
+                        <li className="burg-links" onClick={() => reset()} >WATCH COLLECTION</li>
                     </Link>
-                    <Link style={navStyle} to='/watches'>
 
-                        <li className="burg-links" onClick={() => reset()}>MATERIALS</li>
-                    </Link>
-                    <Link style={navStyle} to='/watches'>
-
-                        <li className="burg-links" onClick={() => reset()}>ABOUT</li>
-                    </Link>
 
                 </ul>
             </div>

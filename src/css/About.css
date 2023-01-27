@@ -7,8 +7,10 @@
 .text-video-container {
     max-height: 150px;
     width: 100%;
-    object-fit: cover;
-    object-position: bottom;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: bottom;
+       object-position: bottom;
 
 
 }
@@ -29,8 +31,33 @@
     margin-bottom: 30px;
     font-size: clamp(2rem, 5vw, 2.7rem);
     font-weight: bold;
-    animation: myanimation 5.7s infinite;
+    -webkit-animation: myanimation 5.7s infinite;
+            animation: myanimation 5.7s infinite;
 
+}
+
+
+
+@-webkit-keyframes myanimation {
+    0% {
+        color: rgb(104, 104, 104);
+    }
+
+    25% {
+        color: rgb(153, 153, 153);
+    }
+
+    50% {
+        color: rgb(153, 153, 153);
+    }
+
+    75% {
+        color: rgb(119, 118, 116);
+    }
+
+    100% {
+        color: rgb(104, 104, 104);
+    }
 }
 
 
@@ -79,6 +106,8 @@
 .ag-p {
     position: relative;
     text-align: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto;
     margin-top: 20px;

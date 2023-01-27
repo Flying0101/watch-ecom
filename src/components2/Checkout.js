@@ -63,7 +63,7 @@ function Checkout() {
     function DeliveryPrice(e) {
         const shipPrice = e.target.value;
         setShipCost(Number(shipPrice));
-          
+
     }
 
 
