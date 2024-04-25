@@ -14,18 +14,18 @@ const HamburgerMenu = ({ xClass }: { xClass?: string }) => {
     >
       <span
         className={`bg-white block transition-all duration-300 ease-out 
-                          h-[0.20rem]  w-8 rounded-sm ${xClass} ${
+                          h-[0.20rem] w-8 rounded-sm ${xClass} ${
           isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
         }`}
       ></span>
       <span
-        className={`bg-white block  transition-all duration-300 ease-out 
+        className={`bg-white block transition-all duration-300 ease-out 
                           h-[0.20rem] w-8 rounded-sm my-0.5 ${xClass} ${
           isOpen ? "opacity-0" : "opacity-100"
         }`}
       ></span>
       <span
-        className={`bg-white block  transition-all duration-300 ease-out 
+        className={`bg-white block transition-all duration-300 ease-out 
                           h-[0.20rem] w-8 rounded-sm ${xClass} ${
           isOpen ? "-rotate-45 -translate-y-[0.39rem]" : "translate-y-0.5"
         }`}
