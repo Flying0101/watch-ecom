@@ -15,6 +15,11 @@ const config: Config = {
       xxl: '1750px',
       xxxl: '2770px',
     },
+    extend: {
+      backgroundImage: {
+          'custom-image': "url('/content/process.jpg')",
+      },
+  },
   },
   plugins: [],
 };
