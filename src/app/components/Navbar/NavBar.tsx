@@ -3,8 +3,8 @@ import { IconShoppingCart } from "@tabler/icons-react";
 
 const NavBar = () => {
   return (
-    <nav className=" group absolute px-6 w-full left-2/4 -translate-x-1/2 max-w-screen-xl h-20 top-0 backdrop-blur-md text-white transition-all ease-out duration-700 flex z-10 hover:bg-white hover:bg-opacity-50 hover:duration-[0.35s]">
-      <div className="md:hidden flex justify-center content-center" >
+    <nav className="group absolute px-6 w-full left-2/4 -translate-x-1/2 max-w-screen-xl h-20 top-0 backdrop-blur-md text-white transition-all ease-out duration-700 flex z-10 hover:bg-white hover:bg-opacity-50 hover:duration-[0.35s]">
+      <div className="md:hidden flex justify-center content-center">
         <HamburgerMenu xClass="group-hover:bg-black" />
       </div>
 
@@ -14,7 +14,7 @@ const NavBar = () => {
         </li>
       </ul>
 
-      <p className="absolute  text-5xl top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 group-hover:text-black hover:cursor-pointer">
+      <p className="absolute text-5xl top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 group-hover:text-black hover:cursor-pointer">
         SM
       </p>
 
