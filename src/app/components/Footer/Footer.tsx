@@ -18,7 +18,7 @@ const Footer = () => {
               <h2 className="mb-6 text-sm font-semibold text-white uppercase ">
                 Resources
               </h2>
-              <ul className="text-gray-500 font-medium">
+              <ul className="text-gray-300 font-medium">
                 <li className="mb-4">
                   <a
                     href="https://www.linkedin.com/in/stephano-melo-333316177/"
@@ -41,7 +41,7 @@ const Footer = () => {
               <h2 className="mb-6 text-sm font-semibold text-white uppercase">
                 Follow us
               </h2>
-              <ul className="text-gray-500 font-medium">
+              <ul className="text-gray-300 font-medium">
                 <li className="mb-4">
                   <a
                     href="https://www.linkedin.com/in/stephano-melo-333316177/"
@@ -64,7 +64,7 @@ const Footer = () => {
               <h2 className="mb-6 text-sm font-semibold text-white uppercase">
                 Legal
               </h2>
-              <ul className="text-gray-500 font-medium">
+              <ul className="text-gray-300 font-medium">
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
                     Privacy Policy
@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center">
+          <span className="text-sm text-gray-300 sm:text-center">
             © 2024
             <a
               href="https://www.linkedin.com/in/stephano-melo-333316177/"
@@ -92,7 +92,7 @@ const Footer = () => {
             . All Rights Reserved.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
-            <a href="#" className="text-gray-500 hover:text-gray-900">
+            <a href="#" className="text-gray-300 hover:text-gray-900">
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"
@@ -108,7 +108,7 @@ const Footer = () => {
               </svg>
               <span className="sr-only">Facebook page</span>
             </a>
-            <a href="#" className="text-gray-500 hover:text-gray-900 ms-5">
+            <a href="#" className="text-gray-300 hover:text-gray-900 ms-5">
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"
@@ -120,7 +120,7 @@ const Footer = () => {
               </svg>
               <span className="sr-only">Discord community</span>
             </a>
-            <a href="#" className="text-gray-500 hover:text-gray-900 ms-5">
+            <a href="#" className="text-gray-300 hover:text-gray-900 ms-5">
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"
@@ -136,7 +136,7 @@ const Footer = () => {
               </svg>
               <span className="sr-only">Twitter page</span>
             </a>
-            <a href="#" className="text-gray-500 hover:text-gray-900 ms-5">
+            <a href="#" className="text-gray-300 hover:text-gray-900 ms-5">
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"
@@ -152,7 +152,7 @@ const Footer = () => {
               </svg>
               <span className="sr-only">GitHub account</span>
             </a>
-            <a href="#" className="text-gray-500 hover:text-gray-900 ms-5">
+            <a href="#" className="text-gray-300 hover:text-gray-900 ms-5">
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"
