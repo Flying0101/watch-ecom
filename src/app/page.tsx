@@ -3,6 +3,7 @@ import IntroText from "./components/IntroText/IntroText";
 import OurLatest from "./components/OurLatest/OurLatest";
 import Quality from "./components/Quality/Quality";
 import Manufacture from "./components/Manufacture/Manufacture";
+import CTA from "./components/CTA/CTA";
 import Footer from "./components/Footer/Footer";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <OurLatest />
       <Quality />
       <Manufacture />
+      <CTA />
       <Footer />
     </main>
   );
