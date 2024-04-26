@@ -9,7 +9,7 @@ import Footer from "./components/Footer/Footer";
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <Hero path="/mp4/hero-video.mp4" />
       <IntroText />
       <OurLatest />
       <Quality />
