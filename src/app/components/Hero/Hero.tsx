@@ -1,4 +1,4 @@
-const Hero = () => {
+const Hero = ({path}: {path:string}) => {
   return (
     <div className="w-full h-screen">
       <video
@@ -8,7 +8,7 @@ const Hero = () => {
         muted
         className="relative object-cover brightness-50 w-full h-full -z-10"
       >
-        <source src="/mp4/hero-video.mp4" type="video/mp4" />
+        <source src={`${path}`} type="video/mp4" />
       </video>
 
       <div className="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 text-white w-11/12">
