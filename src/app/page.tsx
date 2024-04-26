@@ -14,7 +14,7 @@ export default function Home() {
       <OurLatest />
       <Quality />
       <Manufacture />
-      <CTA />
+      <CTA title="See our whole collection here" ctaText="EXPLORE MORE" path="404"/>
       <Footer />
     </main>
   );
