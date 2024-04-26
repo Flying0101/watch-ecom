@@ -17,7 +17,8 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
-          'custom-image': "url('/content/process.jpg')",
+        'custom-image': "url('/content/process.jpg')",
+        'cta-image': "url('/content/cta-bg.jpg')",
       },
   },
   },
