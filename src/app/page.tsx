@@ -4,7 +4,6 @@ import OurLatest from "./components/OurLatest/OurLatest";
 import Quality from "./components/Quality/Quality";
 import Manufacture from "./components/Manufacture/Manufacture";
 import CTA from "./components/CTA/CTA";
-import Footer from "./components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
         ctaText="EXPLORE MORE"
         path="404"
       />
-      <Footer />
     </main>
   );
 }
