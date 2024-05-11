@@ -15,6 +15,7 @@ import DARK from '../../../../public/images/rolex2.png'
 import ROLEX from '../../../../public/images/rolex3.png'
 import AQUA from '../../../../public/images/tag1.png'
 import MONACO from '../../../../public/images/tag2.png'
+import Fuse from 'fuse.js'
 
 export async function GET(request: Request) {
   const mockData = {
@@ -41,5 +42,12 @@ export async function GET(request: Request) {
     ],
   };
 
-  return Response.json(mockData);
+  
+  const searchIndex = Fuse.createIndex(
+    ['brand'],
+    mockData.collection
+  )
+  console.log(searchIndex)
+
+  return Response.json({searchIndex, mockData});
 }
