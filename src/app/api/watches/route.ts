@@ -41,13 +41,11 @@ export async function GET(request: Request) {
         
     ],
   };
-
   
   const searchIndex = Fuse.createIndex(
     ['brand'],
     mockData.collection
   )
-  console.log(searchIndex)
 
   return Response.json({searchIndex, mockData});
 }

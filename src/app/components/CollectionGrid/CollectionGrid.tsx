@@ -1,7 +1,6 @@
 import CollectionCard from "../CollectionCard/CollectionCard";
 import { Watch } from "@/types/watch";
 
-
 const CollectionGrid = ({
   data,
   loading,

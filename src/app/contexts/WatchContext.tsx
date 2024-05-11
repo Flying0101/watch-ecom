@@ -30,8 +30,6 @@ export const WatchProvider = ({ children }: { children: React.ReactNode }) => {
           return;
         }
         const resultData = await response.json();
-        console.log("ALL DATA FETCH ONE");
-
         setAllWatches(resultData.mockData);
       } catch (error) {
         console.error("There was an error fetching data:", error);

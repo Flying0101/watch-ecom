@@ -5,7 +5,6 @@ import SearchField from "../SearchField/SearchField";
 
 const CollectionOverview = () => {
   const { allWatches, loading, results} = useSearch();
-  console.log(allWatches.collection, results);
 
   const searchWatches = results.map((watch: any) => {
     return watch.item;
