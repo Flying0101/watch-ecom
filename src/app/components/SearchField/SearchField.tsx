@@ -3,7 +3,7 @@ import { IconX, IconSearch } from "@tabler/icons-react";
 import { useSearch } from "@/app/contexts/WatchContext";
 
 const SearchField = () => {
-  const { HandleFocus} = useSearch();
+  const { HandleFocus, setSearchWord } = useSearch();
 
   return (
     <div className="w-full flex relative">
@@ -14,15 +14,16 @@ const SearchField = () => {
         onFocus={() => {
           HandleFocus();
         }}
+        onChange={(e) => setSearchWord(e.target.value)}
       />
-        <IconX
-          className="absolute right-5 w-12 h-12 hover:text-gray-500 hover:cursor-pointer"
-          stroke={1}
-        />
-        <IconSearch
-          className="absolute right-5 w-12 h-12 hover:text-gray-500 hover:cursor-pointer"
-          stroke={1}
-        />
+      <IconX
+        className="absolute right-5 w-12 h-12 hover:text-gray-500 hover:cursor-pointer"
+        stroke={1}
+      />
+      <IconSearch
+        className="absolute right-5 w-12 h-12 hover:text-gray-500 hover:cursor-pointer"
+        stroke={1}
+      />
     </div>
   );
 };
