@@ -1,29 +1,23 @@
 "use client";
+import Fuse from "fuse.js";
 import { usePathname, useRouter } from "next/navigation";
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 const WatchContext = createContext<any>(null);
 
 export const WatchProvider = ({ children }: { children: React.ReactNode }) => {
-  const [allWatches, setAllWatches] = useState(null);
+  const [allWatches, setAllWatches] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  const [resultVisible, setResultVisible] = useState(false);
-  const [query, setQuery] = useState<string>("");
   const [searchWord, setSearchWord] = useState<string>("");
   const [results, setResults] = useState<string[]>([]);
-  const pathname = usePathname();
-  const router = useRouter();
-  const [keyListenerAdded, setKeyListenerAdded] = useState(false);
-  const [fuse, setFuse] = useState<any>({});
+  const [fuse, setFuse] = useState<any>(null);
+  const [focused, setFocused] = useState(false);
   const [focusedIndex, setFocusedIndex] = useState(0);
   const [loadingIndex, setLoadingIndex] = useState(true);
+
+  const HandleFocus = () => {
+    setFocused(!focused);
+  };
 
   //Load them all once.
   useEffect(() => {
@@ -36,7 +30,9 @@ export const WatchProvider = ({ children }: { children: React.ReactNode }) => {
           return;
         }
         const resultData = await response.json();
-        setAllWatches(resultData);
+        console.log("ALL DATA FETCH ONE");
+
+        setAllWatches(resultData.mockData);
       } catch (error) {
         console.error("There was an error fetching data:", error);
       } finally {
@@ -46,26 +42,59 @@ export const WatchProvider = ({ children }: { children: React.ReactNode }) => {
     loadAllWatches();
   }, []);
 
-  //load new depending on search query
-  // useEffect(() => {
-  //   const fetchAllWatches = async () => {
-  //     try {
-  //       const response = await fetch(`/api/watches`);
-  //       if (!response.ok) {
-  //         const errorData = await response.json();
-  //         console.error("Error fetching data:", errorData);
-  //         return;
-  //       }
-  //       console.log(await response.json());
-  //     } catch (error) {
-  //       console.error("There was an error fetching data:", error);
-  //     }
-  //   };
-  //   fetchAllWatches();
-  // }, []);
+  useEffect(() => {
+    const fetchSerializedIndex = async () => {
+      try {
+        const response = await fetch(`/api/watches`);
+        if (!response.ok) {
+          const errorData = await response.json();
+          console.error("Error fetching data:", errorData);
+          return;
+        }
+        const { searchIndex, mockData } = await response.json();
+        const deserializedIndex = Fuse.parseIndex(searchIndex);
+        const fuseInstance = new Fuse(
+          mockData.collection,
+          {
+            keys: ["brand"],
+            includeScore: true,
+            includeMatches: true,
+            threshold: 0.2,
+            minMatchCharLength: 2,
+          },
+          deserializedIndex
+        );
+        setFuse(fuseInstance);
+        setLoadingIndex(false);
+      } catch (error) {
+        console.error("There was an error fetching data:", error);
+      }
+    };
+    fetchSerializedIndex();
+  }, []);
+
+  const handleSearch = () => {
+    if (!fuse) return;
+    const searchResult = fuse.search(searchWord);
+    setResults(searchResult);
+    setFocusedIndex(0);
+  };
+
+  useEffect(() => {
+    handleSearch();
+  }, [searchWord]);
 
   return (
-    <WatchContext.Provider value={{ allWatches, loading }}>
+    <WatchContext.Provider
+      value={{
+        allWatches,
+        loading,
+        HandleFocus,
+        focused,
+        setSearchWord,
+        results,
+      }}
+    >
       {children}
     </WatchContext.Provider>
   );
