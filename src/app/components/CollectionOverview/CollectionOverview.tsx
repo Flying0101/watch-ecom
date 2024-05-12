@@ -2,9 +2,10 @@
 import CollectionGrid from "../CollectionGrid/CollectionGrid";
 import { useSearch } from "@/app/contexts/WatchContext";
 import SearchField from "../SearchField/SearchField";
+import Filtering from "../Filtering/Filtering";
 
 const CollectionOverview = () => {
-  const { allWatches, loading, results } = useSearch();
+  const { allWatches, loading, results, checkedValue, setCheckedValue } = useSearch();
 
   const searchWatches = results.map((watch: any) => {
     return watch.item;
@@ -12,7 +13,13 @@ const CollectionOverview = () => {
   return (
     <section className="max-w-screen-xxl mx-auto px-5 py-9 md:py-20 lg:px-10">
       <SearchField />
+      <Filtering />
+      <span className="flex">
+      <p className="mb-6 font-light">{results && results.length > 0 ? (results.length) : (allWatches && allWatches.collection ? allWatches.collection.length : 0)} watches</p>
 
+      {checkedValue>0 && <p onClick={()=>{setCheckedValue('')}} className="ml-3 h-fit flex items-center px-3 border border-black hover:text-gray-500 hover:cursor-pointer hover:border-gray-500">{checkedValue} mm <span className="text-sm ml-3">x</span></p>}
+
+      </span>
       {results.length > 0 ? (
         <CollectionGrid
           data={searchWatches}
