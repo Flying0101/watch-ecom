@@ -15,8 +15,8 @@ const CollectionGrid = ({
   }
   return (
     <div>
-      <h2 className="mb-6 text-2xl text-gray-800 font-light">
-        {defaultTitle ? '- ALL WATCHES -':`WATCHES BY ${data[0].brand.toUpperCase()}`} 
+      <h2 className="mb-6 text-2xl text-black font-thin">
+        {defaultTitle ? '— ALL WATCHES —':`WATCHES BY ${data[0].brand.toUpperCase()}`} 
       </h2>
       <div className="w-full grid sm:grid-cols-2 lg:grid-cols-3 xxl:grid-cols-4 gap-4">
        {data.map((item: Watch) => (
