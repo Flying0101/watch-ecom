@@ -1,6 +1,5 @@
 "use client";
 import Fuse from "fuse.js";
-import { usePathname, useRouter } from "next/navigation";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 const WatchContext = createContext<any>(null);
@@ -14,6 +13,12 @@ export const WatchProvider = ({ children }: { children: React.ReactNode }) => {
   const [focused, setFocused] = useState(false);
   const [focusedIndex, setFocusedIndex] = useState(0);
   const [loadingIndex, setLoadingIndex] = useState(true);
+  const [activeFilter, setActiveFilter] = useState<string>("");
+  const [checkedValue, setCheckedValue] = useState("");
+
+  const handleFilterClick = (filter: string) => {
+    setActiveFilter(filter);
+  };
 
   const HandleFocus = () => {
     setFocused(!focused);
@@ -92,7 +97,12 @@ export const WatchProvider = ({ children }: { children: React.ReactNode }) => {
         searchWord,
         setSearchWord,
         results,
-        setResults
+        setResults,
+        handleFilterClick,
+        activeFilter,
+        setActiveFilter,
+        checkedValue,
+        setCheckedValue,
       }}
     >
       {children}
