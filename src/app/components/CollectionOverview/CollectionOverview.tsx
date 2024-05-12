@@ -4,7 +4,7 @@ import { useSearch } from "@/app/contexts/WatchContext";
 import SearchField from "../SearchField/SearchField";
 
 const CollectionOverview = () => {
-  const { allWatches, loading, results} = useSearch();
+  const { allWatches, loading, results } = useSearch();
 
   const searchWatches = results.map((watch: any) => {
     return watch.item;
@@ -17,7 +17,7 @@ const CollectionOverview = () => {
         <CollectionGrid
           data={searchWatches}
           loading={loading}
-          defaultTitle={true}
+          defaultTitle={false}
         />
       ) : (
         <CollectionGrid
