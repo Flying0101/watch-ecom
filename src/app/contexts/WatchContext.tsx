@@ -89,8 +89,10 @@ export const WatchProvider = ({ children }: { children: React.ReactNode }) => {
         loading,
         HandleFocus,
         focused,
+        searchWord,
         setSearchWord,
         results,
+        setResults
       }}
     >
       {children}
