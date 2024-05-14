@@ -14,7 +14,7 @@ export const WatchProvider = ({ children }: { children: React.ReactNode }) => {
   const [focusedIndex, setFocusedIndex] = useState(0);
   const [loadingIndex, setLoadingIndex] = useState(true);
   const [activeFilter, setActiveFilter] = useState<string>("");
-  const [checkedValue, setCheckedValue] = useState("");
+  const [checkedSize, setCheckedSize] = useState("");
   const [checkedMaterial, setCheckedMaterial] = useState("");
 
   const handleFilterClick = (filter: string) => {
@@ -102,8 +102,8 @@ export const WatchProvider = ({ children }: { children: React.ReactNode }) => {
         handleFilterClick,
         activeFilter,
         setActiveFilter,
-        checkedValue,
-        setCheckedValue,
+        checkedSize,
+        setCheckedSize,
         checkedMaterial,
         setCheckedMaterial
       }}
