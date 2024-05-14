@@ -9,8 +9,8 @@ const CollectionOverview = () => {
     allWatches,
     loading,
     results,
-    checkedValue,
-    setCheckedValue,
+    checkedSize,
+    setCheckedSize,
     checkedMaterial,
     setCheckedMaterial,
   } = useSearch();
@@ -32,14 +32,14 @@ const CollectionOverview = () => {
           watches
         </p>
 
-        {checkedValue > 0 && (
+        {checkedSize > 0 && (
           <p
             onClick={() => {
-              setCheckedValue("");
+              setCheckedSize("");
             }}
             className="ml-3 h-fit flex items-center px-3 border border-black hover:text-gray-500 hover:cursor-pointer hover:border-gray-500"
           >
-            {checkedValue} mm <span className="text-sm ml-3">x</span>
+            {checkedSize} mm <span className="text-sm ml-3">x</span>
           </p>
         )}
         {checkedMaterial.length > 0 && (
