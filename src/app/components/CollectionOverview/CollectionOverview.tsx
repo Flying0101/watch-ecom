@@ -13,6 +13,7 @@ const CollectionOverview = () => {
     setCheckedSize,
     checkedMaterial,
     setCheckedMaterial,
+    watchesQty
   } = useSearch();
 
   const searchWatches = results.map((watch: any) => {
@@ -22,38 +23,7 @@ const CollectionOverview = () => {
     <section className="max-w-screen-xxl mx-auto px-5 py-9 md:py-20 lg:px-10">
       <SearchField />
       <Filtering />
-      <span className="flex">
-        <p className="mb-6 font-light">
-          {results && results.length > 0
-            ? results.length
-            : allWatches && allWatches.collection
-            ? allWatches.collection.length
-            : 0}{" "}
-          watches
-        </p>
-
-        {checkedSize > 0 && (
-          <p
-            onClick={() => {
-              setCheckedSize("");
-            }}
-            className="ml-3 h-fit flex items-center px-3 border border-black hover:text-gray-500 hover:cursor-pointer hover:border-gray-500"
-          >
-            {checkedSize} mm <span className="text-sm ml-3">x</span>
-          </p>
-        )}
-        {checkedMaterial.length > 0 && (
-          <p
-            onClick={() => {
-              setCheckedMaterial("");
-            }}
-            className="ml-3 h-fit flex items-center px-3 border border-black hover:text-gray-500 hover:cursor-pointer hover:border-gray-500"
-          >
-            {checkedMaterial}
-            <span className="text-sm ml-3">x</span>
-          </p>
-        )}
-      </span>
+     
 
       {results.length > 0 ? (
         <CollectionGrid
