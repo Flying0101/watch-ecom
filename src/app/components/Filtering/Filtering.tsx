@@ -44,14 +44,22 @@ const Filtering = () => {
           DONE
         </button>
 
+        {activeFilter === "Collection" && (
+          <div>
+            <p className="font-thin text-3xl mb-3">
+              THIS OPTIONS IS COMING SOON...
+            </p>
+          </div>
+        )}
+
         {activeFilter === "Material" && (
           <div>
             <p className="font-thin text-3xl mb-3">CASES</p>
-            <div className="flex">
+            <div className="flex flex-wrap">
               <div
                 className="py-3 max-w-[90px] mr-5 hover:cursor-pointer"
                 onClick={() => {
-                  setCheckedMaterial("18-CARAT GOLD");
+                  setCheckedMaterial("18-Carat Gold");
                 }}
               >
                 <Image
@@ -61,12 +69,42 @@ const Filtering = () => {
                   height={1000}
                   className="w-20 h-20 mb-2"
                 />
-                <p>18-CARAT GOLD</p>
+                <p>18-Carat Gold</p>
+              </div>
+              <div
+                className="py-3 max-w-[90px] mr-5 hover:cursor-pointer"
+                onClick={() => {
+                  setCheckedMaterial("18-Carat Pink Gold");
+                }}
+              >
+                <Image
+                  alt="material"
+                  src="/material/pink-gold-material.png"
+                  width={1000}
+                  height={1000}
+                  className="w-20 h-20 mb-2"
+                />
+                <p>18-Carat Pink Gold</p>
+              </div>
+              <div
+                className="py-3 max-w-[90px] mr-5 hover:cursor-pointer"
+                onClick={() => {
+                  setCheckedMaterial("18-Carat White Gold");
+                }}
+              >
+                <Image
+                  alt="material"
+                  src="/material/white-gold-material.png"
+                  width={1000}
+                  height={1000}
+                  className="w-20 h-20 mb-2"
+                />
+                <p>18-Carat White Gold</p>
               </div>
               <div
                 className="py-3 max-w-[90px] hover:cursor-pointer"
                 onClick={() => {
-                  setCheckedMaterial("Stainless steel");
+                  setCheckedMaterial("Stainless Steel");
                 }}
               >
                 <Image
