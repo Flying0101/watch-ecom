@@ -21,6 +21,9 @@ const config: Config = {
         'custom-image': "url('/content/process.jpg')",
         'cta-image': "url('/content/cta-bg.jpg')",
       },
+      boxShadow: {
+        white: '10px 0 15px rgba(255, 255, 255, 0.5)',
+      },
   },
   },
   plugins: [],
