@@ -1,23 +1,26 @@
+import { Watch } from "@/types/watch";
 import Image from "next/image";
 
-const LatestCard = () => {
+const LatestCard = ({ data }: { data: Watch }) => {
   return (
     <div className="max-w-xs min-w-[20rem]">
       <Image
-        width={421}
-        height={593}
+        width={data.img.width}
+        height={data.img.height}
         alt="watch"
-        src="/images/rolex-kermit.png"
-        className="w-full px-16 py-6 bg-slate-50"
+        src={data.img}
+        className="w-full object-contain max-h-[300px] min-h-[300px] px-16 py-6 bg-slate-50"
       />
-      <p className="my-5 font-bold">A New "Sand Gold" Shade</p>
-      <p className="mb-9 font-light font-serif">
-        The new Royal Oak Selfwinding Flying Tourbillon Openworked introduces a
-        new 18-carat gold alloy, called sand gold.
-      </p>
+      <p className="my-5 font-bold">{data.serie}</p>
+      <p className="mb-9 font-light font-serif">{data.info}</p>
       <p className="font-bold hover:cursor-pointer group">
-        <span className="group-hover:text-white transition-all ease-out duration-300">-</span>
-        <span className="group-hover:text-white transition-all ease-out duration-500">-</span>- Discover more
+        <span className="group-hover:text-white transition-all ease-out duration-300">
+          -
+        </span>
+        <span className="group-hover:text-white transition-all ease-out duration-500">
+          -
+        </span>
+        - Discover more
       </p>
     </div>
   );
