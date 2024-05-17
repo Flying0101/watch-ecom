@@ -1,8 +1,11 @@
 import Image from "next/image";
 import { Watch } from "@/types/watch";
+import Link from "next/link";
 //type later
 const CollectionCard = ({ watch }: { watch: Watch }) => {
+  
   return (
+    <Link key={watch.id} href={`/collection/${watch.model}-${watch.id}`}>
     <div className="w-full flex items-center group min-h-[500px] text-center max-h-[700px] bg-[#f6f5f3] hover:cursor-pointer">
       <div className="h-fit mx-auto">
         <Image
@@ -24,6 +27,7 @@ const CollectionCard = ({ watch }: { watch: Watch }) => {
         </p>
       </div>
     </div>
+    </Link>
   );
 };
 
