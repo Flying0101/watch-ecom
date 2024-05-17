@@ -16,30 +16,33 @@ const ProductOverview = ({ id }: { id: string }) => {
   }
 
   return (
-    <div className="w-full">
+    <div className="w-full relative max-w-screen-xl mx-auto px-5 mb-14">
       <Breadcrumbs slug={"Royal oak"} />
       <div className="fade-border mt-3 mb-6" />
-      <div className="flex w-full">
-        <div className="w-1/2 flex">
-          <div className="max-w-20 flex items-center">
-            <span>
+      <div className="md:flex w-full">
+        <div className="w-full md:w-1/2 flex-wrap flex">
+          <div className="w-full xs:max-w-20 order-2 xs:order-1 flex xs:items-center">
+            <span className="flex mx-auto xs:block">
               <Image
                 alt="watch"
                 width={480}
                 height={510}
                 src="/images/rolex1.png"
+                className="w-14 object-contain"
               />
               <Image
                 alt="watch"
                 width={480}
                 height={510}
                 src="/images/rolex1.png"
+                className="w-14 object-contain"
               />
               <Image
                 alt="watch"
                 width={480}
                 height={510}
                 src="/images/rolex1.png"
+                className="w-14 object-contain"
               />
             </span>
           </div>
@@ -49,10 +52,10 @@ const ProductOverview = ({ id }: { id: string }) => {
             width={480}
             height={510}
             src="/images/rolex1.png"
-            className="max-w-[300px] object-contain mx-auto"
+            className="w-5/6 xs:max-w-[300px] object-contain mx-auto order-1 xs:order-2"
           />
         </div>
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           <h2 className="my-6 text-2xl font-bold">
             Tudor Heritage Svart/Gulguldtonat stål Ø41 mm
           </h2>
