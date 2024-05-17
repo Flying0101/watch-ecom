@@ -28,21 +28,21 @@ const ProductOverview = ({ id }: { id: string }) => {
                 width={480}
                 height={510}
                 src="/images/rolex1.png"
-                className="w-14 object-contain"
+                className="w-14 object-contain xs:mb-6 xs:w-16 mx-3"
               />
               <Image
                 alt="watch"
                 width={480}
                 height={510}
                 src="/images/rolex1.png"
-                className="w-14 object-contain"
+                className="w-14 object-contain xs:mb-6 xs:w-16 mx-3"
               />
               <Image
                 alt="watch"
                 width={480}
                 height={510}
                 src="/images/rolex1.png"
-                className="w-14 object-contain"
+                className="w-14 object-contain xs:mb-6 xs:w-16 mx-3"
               />
             </span>
           </div>
