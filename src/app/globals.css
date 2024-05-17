@@ -30,3 +30,23 @@ body {
 *::-webkit-scrollbar-track {
   background-color: #edf2f7;
 }
+
+
+.fade-border {
+  border-bottom: 1px solid grey;
+  -o-border-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  border-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  border-image-slice: 1;
+}
