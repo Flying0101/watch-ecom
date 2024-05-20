@@ -18,6 +18,7 @@ export const WatchProvider = ({ children }: { children: React.ReactNode }) => {
   const [checkedMaterial, setCheckedMaterial] = useState("");
   const [watchesQty, setWatchesQty] = useState("");
   const [cartQty, setCartQty] = useState(0);
+  const [cartWatches, setWatches] = useState(0);
 
   const handleFilterClick = (filter: string) => {
     setActiveFilter(filter);
