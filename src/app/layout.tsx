@@ -20,8 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavBar />
-        <WatchProvider>{children}</WatchProvider>
+        <WatchProvider>
+          <NavBar />
+          {children}
+        </WatchProvider>
         <Footer />
       </body>
     </html>
