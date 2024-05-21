@@ -1,4 +1,5 @@
 "use client";
+import { Watch } from "@/types/watch";
 import Fuse from "fuse.js";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
@@ -18,7 +19,17 @@ export const WatchProvider = ({ children }: { children: React.ReactNode }) => {
   const [checkedMaterial, setCheckedMaterial] = useState("");
   const [watchesQty, setWatchesQty] = useState("");
   const [cartQty, setCartQty] = useState(0);
-  const [cartWatches, setWatches] = useState(0);
+  const [cartWatches, setCartWatches] = useState<Watch[]>([]);
+
+
+  const addToCart = (watch: Watch) => {
+    setCartWatches((prevCart) => [...prevCart, watch]);
+  };
+
+  const removeFromCart = (watchId: string) => {
+    setCartWatches((prevCart) => prevCart.filter((watch) => watch.id !== parseInt(watchId)));
+  };
+
 
   const handleFilterClick = (filter: string) => {
     setActiveFilter(filter);
@@ -113,6 +124,10 @@ export const WatchProvider = ({ children }: { children: React.ReactNode }) => {
         watchesQty,
         cartQty,
         setCartQty, 
+        cartWatches,
+        setCartWatches,
+        addToCart,
+        removeFromCart
       }}
     >
       {children}
