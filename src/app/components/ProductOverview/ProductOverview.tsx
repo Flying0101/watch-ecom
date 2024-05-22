@@ -5,10 +5,14 @@ import Image from "next/image";
 import { Watch } from "@/types/watch";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import ProductSpecification from "../ProductSpecification/ProductSpecification";
+import { useState } from "react";
+import { IconChecks } from "@tabler/icons-react";
 
 const ProductOverview = ({ id }: { id: string }) => {
-  const { allWatches } = useSearch();
+  const { allWatches, addToCart } = useSearch();
   let selectedWatch = undefined;
+
+  const [clicked, setClicked] = useState(false);
 
   if (allWatches.collection) {
     selectedWatch = allWatches.collection.find(
@@ -22,6 +26,12 @@ const ProductOverview = ({ id }: { id: string }) => {
   if (!selectedWatch) {
     return <div>Loading...</div>;
   }
+
+  const handelAddToCart = () => {
+    if (!clicked) {
+      addToCart(selectedWatch);
+    }
+  };
 
   return (
     <div>
@@ -107,13 +117,27 @@ const ProductOverview = ({ id }: { id: string }) => {
             <p className="font-bold text-2xl mb-6">
               {formattedPrice?.toLocaleString()} SEK
             </p>
-            <button className="w-full py-4 bg-black text-white">
-              ADD TO CARD
+            <button
+              onClick={() => {setClicked(true), handelAddToCart()}}
+              className="w-full flex items-center justify-center py-4 bg-black text-white"
+            >
+              {clicked ? (
+                <>
+                  Item added
+                  <IconChecks className="ml-2" stroke={1} />
+                </>
+              ) : (
+                "Add to cart"
+              )}
             </button>
           </div>
         </div>
       </div>
-      <ProductSpecification id={id} />
+      <ProductSpecification
+        specificWatch={selectedWatch}
+        price={formattedPrice}
+        recPrice={formattedRecPrice}
+      />
     </div>
   );
 };
