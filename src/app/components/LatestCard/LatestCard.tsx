@@ -1,5 +1,6 @@
 import { Watch } from "@/types/watch";
 import Image from "next/image";
+import Link from "next/link";
 
 const LatestCard = ({ data }: { data: Watch }) => {
   return (
@@ -13,15 +14,17 @@ const LatestCard = ({ data }: { data: Watch }) => {
       />
       <p className="my-5 font-bold">{data.serie}</p>
       <p className="mb-9 font-light font-serif">{data.info}</p>
-      <p className="font-bold hover:cursor-pointer group">
-        <span className="group-hover:text-white transition-all ease-out duration-300">
-          -
-        </span>
-        <span className="group-hover:text-white transition-all ease-out duration-500">
-          -
-        </span>
-        - Discover more
-      </p>
+      <Link href={`/collection/${data.model}-${data.id}`}>
+        <p className="font-bold hover:cursor-pointer group">
+          <span className="group-hover:text-white transition-all ease-out duration-300">
+            -
+          </span>
+          <span className="group-hover:text-white transition-all ease-out duration-500">
+            -
+          </span>
+          - Discover more
+        </p>
+      </Link>
     </div>
   );
 };
