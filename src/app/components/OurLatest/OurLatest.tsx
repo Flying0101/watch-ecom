@@ -3,6 +3,7 @@ import { Watch } from "@/types/watch";
 import LatestCard from "../LatestCard/LatestCard";
 import { useSearch } from "@/app/contexts/WatchContext";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const OurLatest = () => {
   const { allWatches } = useSearch();
@@ -25,7 +26,9 @@ const OurLatest = () => {
           Discover the new watches which embody the brand’s uncompromising
           approach to craftsmanship.
         </p>
+        <Link href='/collection'>
         <p className="font-bold group hover:cursor-pointer">
+          
           <span className="group-hover:text-white transition-all ease-out duration-300">
             -
           </span>
@@ -34,6 +37,7 @@ const OurLatest = () => {
           </span>
           - Explore Our Latest
         </p>
+        </Link>
       </div>
       <div className="ml-auto max-w-4xl flex gap-4 overflow-x-auto pb-7">
         {slicedWatches.length > 0 &&
