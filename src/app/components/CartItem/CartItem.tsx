@@ -1,7 +1,9 @@
 import { Watch } from "@/types/watch";
 import { IconMinus, IconPlus, IconTrashX } from "@tabler/icons-react";
 import Image from "next/image";
-const CartItem = ({data}: {data: Watch}) => {
+const CartItem = ({data, removeWatch}: {data: Watch, removeWatch: any}) => {
+
+
   return (
     <div className="flex sm:flex-wrap py-3 border-t border-t-[#e3e8ea]">
       <span className="flex items-center justify-center mr-3 md:mr-10 relative">
@@ -32,7 +34,7 @@ const CartItem = ({data}: {data: Watch}) => {
         </div>
 
         <p className="my-auto font-bold text-sm mr-3">{data.price.toLocaleString()} SEK</p>
-        <IconTrashX className="my-auto mt-3 sm:mt-auto text-[#737677] hover:text-[#725858] hover:cursor-pointer" />
+        <IconTrashX onClick={()=>removeWatch(data.id)} className="my-auto mt-3 sm:mt-auto text-[#737677] hover:text-[#725858] hover:cursor-pointer" />
       </div>
     </div>
   );

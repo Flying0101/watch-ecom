@@ -2,7 +2,7 @@
 import Image from "next/image";
 import CartItem from "../CartItem/CartItem";
 import { Watch } from "@/types/watch";
-const CartList = ({cartWatches}: {cartWatches: Watch[]}) => {
+const CartList = ({cartWatches, removeWatch}: {cartWatches: Watch[], removeWatch: any}) => {
 
 
 
@@ -11,7 +11,7 @@ const CartList = ({cartWatches}: {cartWatches: Watch[]}) => {
       <span className="flex-col flex md:flex-row flex-wrap h-full">
         <div className="w-fit mx-auto md:mx-0 md:w-full lg:w-3/4">
             {cartWatches.map((watch: Watch) => (
-                <CartItem key={watch.id} data={watch} />
+                <CartItem key={watch.id} data={watch} removeWatch={removeWatch} />
             ))}
            
         </div>
