@@ -16,7 +16,7 @@ export default function Home() {
       <CTA
         title="See our whole collection here"
         ctaText="EXPLORE MORE"
-        path="404"
+        path="/collection"
       />
     </main>
   );
