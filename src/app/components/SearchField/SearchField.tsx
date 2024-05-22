@@ -16,7 +16,7 @@ const SearchField = () => {
         type="text"
         value={searchWord}
         placeholder="Search after brand"
-        className="min-h-16 text-5xl border-b border-black w-full mb-16 outline-none font-thin text-black"
+        className="min-h-16 text-2xl sm:text-3xl md:text-5xl border-b border-black w-full mb-16 outline-none font-thin text-black"
         onFocus={() => {
           HandleFocus();
         }}
