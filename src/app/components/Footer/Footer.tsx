@@ -44,7 +44,8 @@ const Footer = () => {
               <ul className="text-gray-300 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://www.linkedin.com/in/stephano-melo-333316177/"
+                    href="https://github.com/Flying0101"
+                    target="_blank"
                     className="hover:underline "
                   >
                     Github
@@ -136,7 +137,11 @@ const Footer = () => {
               </svg>
               <span className="sr-only">Twitter page</span>
             </a>
-            <a href="#" className="text-gray-300 hover:text-gray-900 ms-5">
+            <a
+              href="https://github.com/Flying0101"
+              target="_blank"
+              className="text-gray-300 hover:text-gray-900 ms-5"
+            >
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"
