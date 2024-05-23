@@ -2,11 +2,9 @@
 import { Watch } from "@/types/watch";
 import { IconMinus, IconPlus, IconTrashX } from "@tabler/icons-react";
 import Image from "next/image";
-import { useSearch } from "@/app/contexts/WatchContext";
 
-const CartItem = ({ data, removeWatch }: { data: Watch; removeWatch: any }) => {
+const CartItem = ({ data, removeFromCart, removeWatch, addToCart }: { data: Watch; removeFromCart: any, removeWatch: any, addToCart: any }) => {
   
-  const { addToCart, removeFromCart } = useSearch();  
 
   return (
     <div className="flex sm:flex-wrap py-3 border-t border-t-[#e3e8ea]">
@@ -27,7 +25,7 @@ const CartItem = ({ data, removeWatch }: { data: Watch; removeWatch: any }) => {
           {data.qty}
         </p>
         <IconPlus
-          className="w-6 h-6 bg-gray-200 rounded-full hover:cursor-pointer "
+          className="w-6 h-6 bg-gray-200 rounded-full hover:cursor-pointer"
           stroke={1}
           onClick={() => addToCart(data)}
         />
