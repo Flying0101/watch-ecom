@@ -45,15 +45,17 @@ const NavBar = () => {
             <IconShoppingCart className="size-8" />
           </Link>
         </li>
-        <p
-          className={
-            cartWatches.length > 0
-              ? "absolute -right-2 md:right-1 top-4 bg-blue-400 p-1 w-6 h-6 text-center rounded-full text-black text-xs"
-              : "hidden"
-          }
-        >
-          {totalQty}
-        </p>
+        <Link href="/cart">
+          <p
+            className={
+              cartWatches.length > 0
+                ? "absolute -right-2 md:right-1 top-4 bg-blue-400 p-1 w-6 h-6 text-center rounded-full text-black text-xs"
+                : "hidden"
+            }
+          >
+            {totalQty}
+          </p>
+        </Link>
       </ul>
     </nav>
   );
