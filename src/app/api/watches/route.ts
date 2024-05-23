@@ -17,6 +17,51 @@ import AQUA from "../../../../public/images/tag1.png";
 import MONACO from "../../../../public/images/tag2.png";
 import Fuse from "fuse.js";
 
+//extra images
+//AP WATCHES
+import AG from "../../../../public/extra/ap/apgold.png";
+import AGTWO from "../../../../public/extra/ap/apgoldtwo.png";
+import APW from "../../../../public/extra/ap/apw.jpg";
+import APWTWO from "../../../../public/extra/ap/apwtwo.png";
+import TOUR from "../../../../public/extra/ap/tour.jpg";
+import TOURTWO from "../../../../public/extra/ap/tour2.png";
+
+//OMEGA WATCHES
+import CNST from "../../../../public/extra/omega/const.png";
+import CNSTTWO from "../../../../public/extra/omega/consttwo.png";
+import SM from "../../../../public/extra/omega/seamaster.png";
+import SMTWO from "../../../../public/extra/omega/seamastertwo.jpg";
+import SMG from "../../../../public/extra/omega/sgrey.png";
+import SMGTWO from "../../../../public/extra/omega/sgreytwo.png";
+
+//PATEK WATCHES
+import FIVE from "../../../../public/extra/patek/5711.jpg";
+import FIVETWO from "../../../../public/extra/patek/5711two.jpeg";
+import FIVEFOUR from "../../../../public/extra/patek/5740.png";
+import FIVEFOURTWO from "../../../../public/extra/patek/5740two.png";
+import AQUAN from "../../../../public/extra/patek/aquab.png";
+import AQUANTWO from "../../../../public/extra/patek/aquabtwo.png";
+import AQUABL from "../../../../public/extra/patek/aquablue.png";
+import AQUABLTWO from "../../../../public/extra/patek/aquabluetwo.png";
+import GW from "../../../../public/extra/patek/gw.png";
+import GWTWO from "../../../../public/extra/patek/gwtwo.png";
+
+//ROLEX WATCHES
+import BS from "../../../../public/extra/rolex/bluesy.png";
+import BSTWO from "../../../../public/extra/rolex/bluesytwo.png";
+import KERMITROLEX from "../../../../public/extra/rolex/kermit.png";
+import KERMITROLEXTWO from "../../../../public/extra/rolex/kermit2.png";
+import PEPSIROLEX from "../../../../public/extra/rolex/pepsi.png";
+import PEPSIROLEXTWO from "../../../../public/extra/rolex/pepsitwo.jpg";
+import SUB from "../../../../public/extra/rolex/black.png";
+import SUBTWO from "../../../../public/extra/rolex/blacktwo.png";
+
+//TAG WATCHES
+import AR from "../../../../public/extra/tag/aquaracer.png";
+import ARTWO from "../../../../public/extra/tag/aquaracer2.jpg";
+import MNC from "../../../../public/extra/tag/monaco.png";
+import MNCTWO from "../../../../public/extra/tag/monacotwo.png";
+
 export async function GET(request: Request) {
   const mockData = {
     collection: [
@@ -40,7 +85,11 @@ export async function GET(request: Request) {
         resistance: "5 ATM",
         glass: "Sapphire crystal",
         img: APSTEEL,
+        imgtwo: TOUR,
+        imgthree: TOURTWO,
         yr: "2021",
+        qty: 1,
+        total: 0,
       },
       {
         id: 1,
@@ -62,7 +111,11 @@ export async function GET(request: Request) {
         resistance: "5 ATM",
         glass: "Sapphire crystal",
         img: APWHITE,
+        imgtwo: APW,
+        imgthree: APWTWO,
         yr: "2023",
+        qty: 1,
+        total: 0,
       },
       {
         id: 2,
@@ -84,7 +137,11 @@ export async function GET(request: Request) {
         resistance: "5ATM",
         glass: "Sapphire crystal",
         img: APGOLD,
+        imgtwo: AG,
+        imgthree: AGTWO,
         yr: "2022",
+        qty: 1,
+        total: 0,
       },
       {
         id: 3,
@@ -106,7 +163,11 @@ export async function GET(request: Request) {
         resistance: "5 bar",
         glass: "Sapphire crystal",
         img: OGLEATHER,
+        imgtwo: CNST,
+        imgthree: CNSTTWO,
         yr: "2023",
+        qty: 1,
+        total: 0,
       },
       {
         id: 4,
@@ -128,7 +189,11 @@ export async function GET(request: Request) {
         resistance: "300ATM",
         glass: "Sapphire crystal",
         img: OGSTEEL,
+        imgtwo: SM,
+        imgthree: SMTWO,
         yr: "2023",
+        qty: 1,
+        total: 0,
       },
       {
         id: 5,
@@ -150,7 +215,11 @@ export async function GET(request: Request) {
         resistance: "300ATM",
         glass: "Sapphire crystal",
         img: OGBLUE,
+        imgtwo: SMG,
+        imgthree: SMGTWO,
         yr: "2023",
+        qty: 1,
+        total: 0,
       },
       {
         id: 6,
@@ -172,7 +241,11 @@ export async function GET(request: Request) {
         resistance: "10ATM",
         glass: "Sapphire crystal",
         img: PBLUE,
+        imgtwo: AQUABL,
+        imgthree: AQUABLTWO,
         yr: "2019",
+        qty: 1,
+        total: 0,
       },
       {
         id: 7,
@@ -194,7 +267,11 @@ export async function GET(request: Request) {
         resistance: "10ATM",
         glass: "Sapphire crystal",
         img: PBLACK,
+        imgtwo: AQUAN,
+        imgthree: AQUANTWO,
         yr: "2019",
+        qty: 1,
+        total: 0,
       },
       {
         id: 8,
@@ -216,7 +293,11 @@ export async function GET(request: Request) {
         resistance: "6ATM",
         glass: "Sapphire crystal",
         img: PMOON,
+        imgtwo: FIVEFOUR,
+        imgthree: FIVEFOURTWO,
         yr: "2019",
+        qty: 1,
+        total: 0,
       },
       {
         id: 9,
@@ -238,7 +319,11 @@ export async function GET(request: Request) {
         resistance: "6ATM",
         glass: "Sapphire crystal",
         img: PGOLDSTEEL,
+        imgtwo: GW,
+        imgthree: GWTWO,
         yr: "2019",
+        qty: 1,
+        total: 0,
       },
       {
         id: 10,
@@ -260,7 +345,11 @@ export async function GET(request: Request) {
         resistance: "6ATM",
         glass: "Sapphire crystal",
         img: PSTEEL,
+        imgtwo: FIVE,
+        imgthree: FIVETWO,
         yr: "2019",
+        qty: 1,
+        total: 0,
       },
       {
         id: 11,
@@ -282,7 +371,11 @@ export async function GET(request: Request) {
         resistance: "30ATM",
         glass: "Sapphire crystal",
         img: KERMIT,
+        imgtwo: KERMITROLEX,
+        imgthree: KERMITROLEXTWO,
         yr: "2008",
+        qty: 1,
+        total: 0,
       },
       {
         id: 12,
@@ -304,7 +397,11 @@ export async function GET(request: Request) {
         resistance: "30ATM",
         glass: "Sapphire crystal",
         img: PEPSI,
+        imgtwo: PEPSIROLEX,
+        imgthree: PEPSIROLEXTWO,
         yr: "2022",
+        qty: 1,
+        total: 0,
       },
       {
         id: 13,
@@ -326,7 +423,11 @@ export async function GET(request: Request) {
         resistance: "30ATM",
         glass: "Sapphire crystal",
         img: DARK,
+        imgtwo: SUB,
+        imgthree: SUBTWO,
         yr: "20022",
+        qty: 1,
+        total: 0,
       },
       {
         id: 14,
@@ -348,7 +449,11 @@ export async function GET(request: Request) {
         resistance: "30ATM",
         glass: "Sapphire crystal",
         img: ROLEX,
+        imgtwo: BS,
+        imgthree: BSTWO,
         yr: "2019",
+        qty: 1,
+        total: 0,
       },
       {
         id: 15,
@@ -370,7 +475,11 @@ export async function GET(request: Request) {
         resistance: "300ATM",
         glass: "Sapphire crystal",
         img: AQUA,
+        imgtwo: AR,
+        imgthree: ARTWO,
         yr: "2023",
+        qty: 1,
+        total: 0,
       },
       {
         id: 16,
@@ -392,7 +501,11 @@ export async function GET(request: Request) {
         resistance: "100ATM",
         glass: "Sapphire crystal",
         img: MONACO,
+        imgtwo: MNC,
+        imgthree: MNCTWO,
         yr: "2023",
+        qty: 1,
+        total: 0,
       },
     ],
   };
