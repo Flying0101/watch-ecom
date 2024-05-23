@@ -1,8 +1,12 @@
+'use client'
 import { Watch } from "@/types/watch";
 import { IconMinus, IconPlus, IconTrashX } from "@tabler/icons-react";
 import Image from "next/image";
-const CartItem = ({data, removeWatch}: {data: Watch, removeWatch: any}) => {
+import { useSearch } from "@/app/contexts/WatchContext";
 
+const CartItem = ({ data, removeWatch }: { data: Watch; removeWatch: any }) => {
+  
+  const { addToCart, removeFromCart } = useSearch();  
 
   return (
     <div className="flex sm:flex-wrap py-3 border-t border-t-[#e3e8ea]">
@@ -10,6 +14,7 @@ const CartItem = ({data, removeWatch}: {data: Watch, removeWatch: any}) => {
         <IconMinus
           className="w-6 h-6 bg-gray-200 rounded-full hover:cursor-pointer"
           stroke={1}
+          onClick={() => removeFromCart(data.id)}
         />
         <Image
           src={data.img.src}
@@ -19,11 +24,12 @@ const CartItem = ({data, removeWatch}: {data: Watch, removeWatch: any}) => {
           className="w-20 h-20 object-cover rounded-lg mx-2"
         />
         <p className="w-6 h-6 bg-black text-white rounded-full text-sm text-center absolute border-2 border-white left-1/2 transform -translate-x-1/2">
-          1
+          {data.qty}
         </p>
         <IconPlus
           className="w-6 h-6 bg-gray-200 rounded-full hover:cursor-pointer "
           stroke={1}
+          onClick={() => addToCart(data)}
         />
       </span>
 
@@ -33,8 +39,13 @@ const CartItem = ({data, removeWatch}: {data: Watch, removeWatch: any}) => {
           <p className="font-semibold text-sm">{data.model}</p>
         </div>
 
-        <p className="my-auto font-bold text-sm mr-3">{data.price.toLocaleString()} SEK</p>
-        <IconTrashX onClick={()=>removeWatch(data.id)} className="my-auto mt-3 sm:mt-auto text-[#737677] hover:text-[#725858] hover:cursor-pointer" />
+        <p className="my-auto font-bold text-sm mr-3">
+          {data.total.toLocaleString()} SEK
+        </p>
+        <IconTrashX
+          onClick={() => removeWatch(data.id)}
+          className="my-auto mt-3 sm:mt-auto text-[#737677] hover:text-[#725858] hover:cursor-pointer"
+        />
       </div>
     </div>
   );
