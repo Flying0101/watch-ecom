@@ -21,15 +21,41 @@ export const WatchProvider = ({ children }: { children: React.ReactNode }) => {
   const [cartQty, setCartQty] = useState(0);
   const [cartWatches, setCartWatches] = useState<Watch[]>([]);
 
-
   const addToCart = (watch: Watch) => {
-    setCartWatches((prevCart) => [...prevCart, watch]);
+    const existingWatch = cartWatches.find((item) => item.id === watch.id);
+    if (existingWatch) {
+      const updatedCart = cartWatches.map((item) =>
+        item.id === watch.id
+          ? { ...item, qty: item.qty + 1, total: (item.qty + 1) * item.price }
+          : item
+      );
+      setCartWatches(updatedCart);
+    } else {
+      setCartWatches([
+        ...cartWatches,
+        { ...watch, qty: 1, total: watch.price },
+      ]);
+    }
   };
 
   const removeFromCart = (watchId: string) => {
-    setCartWatches((prevCart) => prevCart.filter((watch) => watch.id !== parseInt(watchId)));
+    const existingWatch = cartWatches.find(
+      (item) => item.id === parseInt(watchId)
+    );
+    if (existingWatch && existingWatch.qty > 1) {
+      const updatedCart = cartWatches.map((item) =>
+        item.id === parseInt(watchId)
+          ? { ...item, qty: item.qty - 1, total: (item.qty - 1) * item.price }
+          : item
+      );
+      setCartWatches(updatedCart);
+    } else {
+      const updatedCart = cartWatches.filter(
+        (item) => item.id !== parseInt(watchId)
+      );
+      setCartWatches(updatedCart);
+    }
   };
-
 
   const handleFilterClick = (filter: string) => {
     setActiveFilter(filter);
@@ -123,11 +149,11 @@ export const WatchProvider = ({ children }: { children: React.ReactNode }) => {
         setWatchesQty,
         watchesQty,
         cartQty,
-        setCartQty, 
+        setCartQty,
         cartWatches,
         setCartWatches,
         addToCart,
-        removeFromCart
+        removeFromCart,
       }}
     >
       {children}
