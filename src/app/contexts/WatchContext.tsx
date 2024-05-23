@@ -57,6 +57,11 @@ export const WatchProvider = ({ children }: { children: React.ReactNode }) => {
     }
   };
 
+  const removeWatch = (id: string) => {
+    setCartWatches(prevWatches => prevWatches.filter(watch => watch.id !== parseInt(id)));
+  };
+
+
   const handleFilterClick = (filter: string) => {
     setActiveFilter(filter);
   };
@@ -154,6 +159,7 @@ export const WatchProvider = ({ children }: { children: React.ReactNode }) => {
         setCartWatches,
         addToCart,
         removeFromCart,
+        removeWatch
       }}
     >
       {children}
