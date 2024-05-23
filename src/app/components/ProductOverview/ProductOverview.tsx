@@ -5,20 +5,31 @@ import Image from "next/image";
 import { Watch } from "@/types/watch";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import ProductSpecification from "../ProductSpecification/ProductSpecification";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IconChecks } from "@tabler/icons-react";
 
 const ProductOverview = ({ id }: { id: string }) => {
   const { allWatches, addToCart } = useSearch();
-  let selectedWatch = undefined;
-
   const [clicked, setClicked] = useState(false);
+  const [currentImage, setCurrentImage] = useState("");
+
+  let selectedWatch = undefined;
 
   if (allWatches.collection) {
     selectedWatch = allWatches.collection.find(
       (watch: Watch) => watch.id === parseInt(id)
     );
   }
+
+  useEffect(() => {
+    if (selectedWatch) {
+      setCurrentImage(selectedWatch.img.src);
+    }
+  }, [selectedWatch]);
+
+  const handleImageClick = (newImageSrc: any) => {
+    setCurrentImage(newImageSrc);
+  };
 
   const formattedRecPrice = selectedWatch?.price - 15000;
   const formattedPrice = selectedWatch?.price;
@@ -44,24 +55,39 @@ const ProductOverview = ({ id }: { id: string }) => {
               <span className="flex mx-auto xs:block">
                 <Image
                   alt="watch"
-                  width={480}
-                  height={510}
-                  src="/images/rolex1.png"
-                  className="w-14 object-contain xs:mb-6 xs:w-16 mx-3 hover:cursor-pointer"
+                  width={selectedWatch.img.width}
+                  height={selectedWatch.img.height}
+                  src={selectedWatch.img.src}
+                  className={`w-14 object-contain xs:mb-6 xs:w-16 mx-3 hover:cursor-pointer ${
+                    currentImage === selectedWatch.img.src
+                      ? "opacity-40"
+                      : "hover:opacity-70"
+                  }`}
+                  onClick={() => handleImageClick(selectedWatch.img.src)}
                 />
                 <Image
                   alt="watch"
-                  width={480}
-                  height={510}
-                  src="/images/rolex1.png"
-                  className="w-14 object-contain xs:mb-6 xs:w-16 mx-3 hover:cursor-pointer"
+                  width={selectedWatch.imgtwo.width}
+                  height={selectedWatch.imgtwo.height}
+                  src={selectedWatch.imgtwo.src}
+                  className={`w-14 object-contain xs:mb-6 xs:w-16 mx-3 hover:cursor-pointer ${
+                    currentImage === selectedWatch.imgtwo.src
+                      ? "opacity-40"
+                      : "hover:opacity-70"
+                  }`}
+                  onClick={() => handleImageClick(selectedWatch.imgtwo.src)}
                 />
                 <Image
                   alt="watch"
-                  width={480}
-                  height={510}
-                  src="/images/rolex1.png"
-                  className="w-14 object-contain xs:mb-6 xs:w-16 mx-3 hover:cursor-pointer"
+                  width={selectedWatch.imgthree.width}
+                  height={selectedWatch.imgthree.height}
+                  src={selectedWatch.imgthree.src}
+                  className={`w-14 object-contain xs:mb-6 xs:w-16 mx-3 hover:cursor-pointer ${
+                    currentImage === selectedWatch.imgthree.src
+                      ? "opacity-40"
+                      : "hover:opacity-70"
+                  }`}
+                  onClick={() => handleImageClick(selectedWatch.imgthree.src)}
                 />
               </span>
             </div>
@@ -70,7 +96,7 @@ const ProductOverview = ({ id }: { id: string }) => {
               alt="watch"
               width={480}
               height={510}
-              src={selectedWatch.img.src}
+              src={currentImage}
               className="w-5/6 xs:max-w-[300px] object-contain mx-auto order-1 xs:order-2"
             />
           </div>
@@ -118,7 +144,9 @@ const ProductOverview = ({ id }: { id: string }) => {
               {formattedPrice?.toLocaleString()} SEK
             </p>
             <button
-              onClick={() => {setClicked(true), handelAddToCart()}}
+              onClick={() => {
+                setClicked(true), handelAddToCart();
+              }}
               className="w-full flex items-center justify-center py-4 bg-black text-white"
             >
               {clicked ? (
