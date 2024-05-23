@@ -14,6 +14,20 @@ export interface Watch {
     blurDataURL: string;
     blurWidth: number;
   };
+  imgtwo: {
+    src: string;
+    height: number;
+    width: number;
+    blurDataURL: string;
+    blurWidth: number;
+  };
+  imgthree: {
+    src: string;
+    height: number;
+    width: number;
+    blurDataURL: string;
+    blurWidth: number;
+  };
   info: string;
   material: string;
   model: string;
@@ -24,4 +38,6 @@ export interface Watch {
   serie: string;
   sort: string;
   variant: string;
+  qty: number;
+  total: number;
 }
