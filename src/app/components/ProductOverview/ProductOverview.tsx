@@ -97,7 +97,7 @@ const ProductOverview = ({ id }: { id: string }) => {
               width={480}
               height={510}
               src={currentImage}
-              className="w-5/6 xs:max-w-[300px] object-contain mx-auto order-1 xs:order-2"
+              className="w-5/6 max-h-[300px] md:max-h-none xs:max-w-[300px] object-contain mx-auto order-1 xs:order-2"
             />
           </div>
           <div className="w-full md:w-1/2">
