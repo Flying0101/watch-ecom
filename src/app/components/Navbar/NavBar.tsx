@@ -7,6 +7,8 @@ import Link from "next/link";
 const NavBar = () => {
   const { cartWatches } = useSearch();
 
+  const totalQty = cartWatches.reduce((acc, watch) => acc + watch.qty, 0);
+
   return (
     <nav className="group absolute px-6 w-full left-2/4 -translate-x-1/2 max-w-screen-xl h-20 top-0 backdrop-blur-md transition-all ease-out duration-700 flex z-10 bg-white bg-opacity-50 hover:duration-[0.35s]">
       <div className="md:hidden flex justify-center content-center">
@@ -32,11 +34,11 @@ const NavBar = () => {
         <p
           className={
             cartWatches.length > 0
-              ? "absolute right-4 top-4 bg-blue-400 p-1 rounded-full text-white text-xs group-hover:text-black"
+              ? "absolute right-4 top-4 bg-blue-400 p-1 w-6 h-6 text-center rounded-full text-white text-xs group-hover:text-black"
               : "hidden"
           }
         >
-          {cartWatches.length}
+          {totalQty}
         </p>
       </ul>
     </nav>
