@@ -111,10 +111,9 @@ const ProductOverview = ({ id }: { id: string }) => {
               rek: pris: {formattedRecPrice?.toLocaleString()} kr
             </p>
             <p className="mb-10 flex items-center">
-              {" "}
               {[...Array(5)].map((_, i) => (
                 <IconStar key={i} className="w-4 h-4 mr-1" />
-              ))}{" "}
+              ))}
               0 reviews
             </p>
             <p className="mb-6 flex">
@@ -124,20 +123,16 @@ const ProductOverview = ({ id }: { id: string }) => {
             <hr className="fade-border mb-6" />
             <span className="flex flex-wrap mb-14">
               <p className="min-w-[300px] mb-3 flex">
-                {" "}
-                <IconCheck stroke={1} className="mr-1" /> 5 years officiall{" "}
+                <IconCheck stroke={1} className="mr-1" /> 5 years officiall
               </p>
               <p className="min-w-[300px] mb-3 flex">
-                {" "}
-                <IconCheck stroke={1} className="mr-1" /> Secure payments{" "}
+                <IconCheck stroke={1} className="mr-1" /> Secure payments
               </p>
               <p className="min-w-[300px] mb-3 flex">
-                {" "}
                 <IconCheck stroke={1} className="mr-1" /> 90 days money back
                 guarantee
               </p>
               <p className="min-w-[300px] mb-3 flex">
-                {" "}
                 <IconCheck stroke={1} className="mr-1" /> secured deliveries
               </p>
             </span>
