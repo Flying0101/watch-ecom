@@ -30,7 +30,7 @@ const NavBar = () => {
       </ul>
       <Link href={toggle ? "/collection" : "/"}>
         {toggle ? (
-          <p className="absolute text-2xl top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 hover:cursor-pointer">
+          <p className="absolute text-2xl font-medium top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 hover:cursor-pointer">
             COLLECTION
           </p>
         ) : (
