@@ -8,13 +8,19 @@ import Link from "next/link";
 const OurLatest = () => {
   const { allWatches } = useSearch();
   const [slicedWatches, setSlicedWatches] = useState([]);
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     if (allWatches.collection && Array.isArray(allWatches.collection)) {
       const lastFive = allWatches.collection.slice(-4);
       setSlicedWatches(lastFive);
+      setLoading(false);
     }
   }, [allWatches]);
+
+  if (loading) {
+    return <div className="w-full text-center my-14 font-thin text-4xl">Loading watches...</div>;
+  }
 
   return (
     <div className="relative max-w-screen-xl mx-auto px-5 py-9 md:py-20 flex gap-20 md:gap-8 flex-wrap md:flex-nowrap">
