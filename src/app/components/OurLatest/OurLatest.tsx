@@ -8,7 +8,7 @@ import Link from "next/link";
 const OurLatest = () => {
   const { allWatches } = useSearch();
   const [slicedWatches, setSlicedWatches] = useState([]);
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (allWatches.collection && Array.isArray(allWatches.collection)) {
@@ -19,7 +19,11 @@ const OurLatest = () => {
   }, [allWatches]);
 
   if (loading) {
-    return <div className="w-full text-center my-14 font-thin text-4xl">Loading watches...</div>;
+    return (
+      <div className="w-full text-center my-14 font-thin text-4xl">
+        Loading watches...
+      </div>
+    );
   }
 
   return (
@@ -32,17 +36,16 @@ const OurLatest = () => {
           Discover the new watches which embody the brand’s uncompromising
           approach to craftsmanship.
         </p>
-        <Link href='/collection'>
-        <p className="font-bold group hover:cursor-pointer">
-          
-          <span className="group-hover:text-white transition-all ease-out duration-300">
-            -
-          </span>
-          <span className="group-hover:text-white transition-all ease-out duration-500">
-            -
-          </span>
-          - Explore Our Latest
-        </p>
+        <Link href="/collection">
+          <p className="font-bold group hover:cursor-pointer">
+            <span className="group-hover:text-white transition-all ease-out duration-300">
+              -
+            </span>
+            <span className="group-hover:text-white transition-all ease-out duration-500">
+              -
+            </span>
+            - Explore Our Latest
+          </p>
         </Link>
       </div>
       <div className="ml-auto max-w-4xl flex gap-4 overflow-x-auto pb-7">
