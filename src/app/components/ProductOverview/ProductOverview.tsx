@@ -52,13 +52,13 @@ const ProductOverview = ({ id }: { id: string }) => {
         <div className="md:flex w-full">
           <div className="w-full md:w-1/2 flex-wrap flex">
             <div className="w-full xs:max-w-20 order-2 xs:order-1 flex xs:items-center">
-              <span className="flex mx-auto xs:block">
+              <span className="flex mx-auto xs:block mt-6 sm:mt-0">
                 <Image
                   alt="watch"
                   width={selectedWatch.img.width}
                   height={selectedWatch.img.height}
                   src={selectedWatch.img.src}
-                  className={`w-14 object-contain xs:mb-6 xs:w-16 mx-3 hover:cursor-pointer ${
+                  className={`w-14 object-contain xs:mb-6 xs:w-16 mx-3 h-14 md:h-20 hover:cursor-pointer ${
                     currentImage === selectedWatch.img.src
                       ? "opacity-40"
                       : "hover:opacity-70"
@@ -70,7 +70,7 @@ const ProductOverview = ({ id }: { id: string }) => {
                   width={selectedWatch.imgtwo.width}
                   height={selectedWatch.imgtwo.height}
                   src={selectedWatch.imgtwo.src}
-                  className={`w-14 object-contain xs:mb-6 xs:w-16 mx-3 hover:cursor-pointer ${
+                  className={`w-14 object-contain xs:mb-6 xs:w-16 mx-3 h-14 md:h-20 hover:cursor-pointer ${
                     currentImage === selectedWatch.imgtwo.src
                       ? "opacity-40"
                       : "hover:opacity-70"
@@ -82,7 +82,7 @@ const ProductOverview = ({ id }: { id: string }) => {
                   width={selectedWatch.imgthree.width}
                   height={selectedWatch.imgthree.height}
                   src={selectedWatch.imgthree.src}
-                  className={`w-14 object-contain xs:mb-6 xs:w-16 mx-3 hover:cursor-pointer ${
+                  className={`w-14 object-contain xs:mb-6 xs:w-16 mx-3 h-14 md:h-20 hover:cursor-pointer ${
                     currentImage === selectedWatch.imgthree.src
                       ? "opacity-40"
                       : "hover:opacity-70"
@@ -94,10 +94,11 @@ const ProductOverview = ({ id }: { id: string }) => {
 
             <Image
               alt="watch"
-              width={480}
-              height={510}
+              width={selectedWatch.img.width}
+              height={selectedWatch.img.height}
               src={currentImage}
-              className="w-5/6 max-h-[300px] md:max-h-none xs:max-w-[300px] object-contain mx-auto order-1 xs:order-2"
+              className="w-5/6 h-[300px] md:h-[400px] my-auto xs:max-w-[300px] object-contain mx-auto order-1 xs:order-2"
+              priority
             />
           </div>
           <div className="w-full md:w-1/2">
