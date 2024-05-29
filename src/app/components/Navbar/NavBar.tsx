@@ -15,7 +15,7 @@ const NavBar = () => {
   );
 
   return (
-    <nav className="group absolute px-6 w-full left-2/4 -translate-x-1/2 max-w-screen-xl h-20 top-0 backdrop-blur-md transition-all ease-out duration-700 flex z-10 bg-white bg-opacity-50 hover:duration-[0.35s]">
+    <nav className="group absolute px-6 w-full left-2/4 -translate-x-1/2 max-w-screen-xl xl:rounded-full xl:top-3 h-20 top-0 backdrop-blur-md transition-all ease-out duration-700 flex z-10 bg-white bg-opacity-70 hover:duration-[0.35s]">
       <div
         className="md:hidden flex justify-center content-center"
         onClick={() => setToggle(!toggle)}
