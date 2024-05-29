@@ -143,7 +143,7 @@ const ProductOverview = ({ id }: { id: string }) => {
               onClick={() => {
                 setClicked(true), handelAddToCart();
               }}
-              className="w-full flex items-center justify-center py-4 bg-black text-white"
+              className="w-full flex items-center justify-center h-16 bg-black text-white"
             >
               {clicked ? (
                 <>
@@ -151,7 +151,11 @@ const ProductOverview = ({ id }: { id: string }) => {
                   <IconChecks className="ml-2" stroke={1} />
                 </>
               ) : (
-                "Add to cart"
+                <p>
+                 <span className="">Add to cart </span> 
+                  <br />
+                  <span className="font-light text-sm">and discover 2 free gifts at checkout</span>
+                </p>
               )}
             </button>
           </div>
