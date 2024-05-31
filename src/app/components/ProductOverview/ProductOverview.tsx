@@ -7,11 +7,13 @@ import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import ProductSpecification from "../ProductSpecification/ProductSpecification";
 import { useEffect, useState } from "react";
 import { IconChecks } from "@tabler/icons-react";
+import Popup from "../Popup/Popup";
 
 const ProductOverview = ({ id }: { id: string }) => {
   const { allWatches, addToCart } = useSearch();
   const [clicked, setClicked] = useState(false);
   const [currentImage, setCurrentImage] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
 
   let selectedWatch = undefined;
 
@@ -27,6 +29,15 @@ const ProductOverview = ({ id }: { id: string }) => {
     }
   }, [selectedWatch]);
 
+  useEffect(() => {
+    if (showPopup) {
+      const timer = setTimeout(() => {
+        setShowPopup(false);
+      }, 10000);
+      return () => clearTimeout(timer);
+    }
+  }, [showPopup]);
+
   const handleImageClick = (newImageSrc: any) => {
     setCurrentImage(newImageSrc);
   };
@@ -41,11 +52,13 @@ const ProductOverview = ({ id }: { id: string }) => {
   const handelAddToCart = () => {
     if (!clicked) {
       addToCart(selectedWatch);
+      setShowPopup(true);
     }
   };
 
   return (
     <div>
+      {showPopup && <Popup data={selectedWatch} state={setShowPopup} />}
       <div className="w-full relative max-w-screen-xl mx-auto px-5 mb-14">
         <Breadcrumbs slug={selectedWatch?.model} />
         <div className="fade-border mt-3 mb-6" />
@@ -152,9 +165,11 @@ const ProductOverview = ({ id }: { id: string }) => {
                 </>
               ) : (
                 <p>
-                 <span className="">Add to cart </span> 
+                  <span className="">Add to cart </span>
                   <br />
-                  <span className="font-light text-sm">and discover 2 free gifts at checkout</span>
+                  <span className="font-light text-sm">
+                    and discover 2 free gifts at checkout
+                  </span>
                 </p>
               )}
             </button>
