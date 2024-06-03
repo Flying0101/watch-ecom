@@ -88,7 +88,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/stephano-melo-333316177/"
               className="hover:underline"
             >
-              Stephano Melo™
+               {' '}Stephano Melo™
             </a>
             . All Rights Reserved.
           </span>
