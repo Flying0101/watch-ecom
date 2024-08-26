@@ -12,17 +12,20 @@ Before you begin, ensure you have the following installed:
 
 Follow these steps to get the project up and running on your local machine:
 
-### 1. Clone the Repository
+### 1. Clone the Repository  
 
 First, clone the repository to your local machine:
 ```bash
 git clone git@github.com:Flying0101/watch-ecom.git
+```
+Update directory path:
+```bash
 cd watch-ecom
 ```
-
 ### 2. Install Dependencies
 
 Next, install the project dependencies. You can use either npm or Yarn for this.
+
 Using npm:
 ```bash
 npm install
@@ -35,6 +38,7 @@ yarn install
 ### 3. Run The Development Server
 
 To start the development server and view the application in your browser:
+
 Using npm:
 ```bash
 npm run dev
