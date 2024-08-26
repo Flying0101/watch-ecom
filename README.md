@@ -1,6 +1,6 @@
 # Watch Ecom
 
-This README provides instructions for setting up and running the project on a new Windows machine.
+This README provides instructions for setting up and running the project on a new machine.
 
 ## Requirements
 
